@@ -259,6 +259,7 @@ video::-webkit-media-controls-panel {
       height: 100vh;
       justify-content: space-between;
       border: 0;
+      display: none;
     }
     .video-container .options .answers {
       margin-top: 12px;
@@ -331,6 +332,7 @@ video::-webkit-media-controls-panel {
         height: 100vh;
         justify-content: space-between;
         border: 0;
+        display: none;
       }
   }
   
