@@ -1305,7 +1305,7 @@ function nextVideo(selection, moderator, sponsor=true) {
     }
     if (selection === "won" || selection === "time" || selection === "wrong1" || selection === "wrong2" || selection === "wrong3") {
         document.getElementById('videosDiv').innerHTML += `<div class="video">
-            <video id="quiz-${selection}" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
+            <video id="quiz-${selection}" class="video-js vjs-fill" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
                 <source src="${dataset[selection].video}" type="application/x-mpegURL">
             </video>
         </div>`;
@@ -1329,7 +1329,7 @@ function nextVideo(selection, moderator, sponsor=true) {
                 }
             });
             document.getElementById('videosDiv').innerHTML += `<div class="video">
-                <video id="quiz-right" onended="nextVideo('${selection}', false)" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
+                <video id="quiz-right" onended="nextVideo('${selection}', false)" class="video-js vjs-fill" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
                     <source src="${dataset["right"]["video"]}" type="application/x-mpegURL">
                 </video>
             </div>`;
@@ -1347,7 +1347,7 @@ function nextVideo(selection, moderator, sponsor=true) {
                 sponsor = dataset["sponsor3"].video;
             }
             document.getElementById('videosDiv').innerHTML += `<div class="video">
-                <video id="quiz-sponsor" onended="nextVideo('${selection}', false, false)" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
+                <video id="quiz-sponsor" onended="nextVideo('${selection}', false, false)" class="video-js vjs-fill" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
                     <source src="${sponsor}" type="application/x-mpegURL">
                 </video>
             </div>`;
@@ -1359,7 +1359,7 @@ function nextVideo(selection, moderator, sponsor=true) {
             let question = questions[randomQuestionNo].question;
             document.getElementById('videosDiv').innerHTML += `<div class="video">
                 <div class="countdown"></div>
-                <video id="quiz-${selection}" onended="nextQuestion(\`${question}\`, '${selection}', '${randomQuestionNo}')" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
+                <video id="quiz-${selection}" onended="nextQuestion(\`${question}\`, '${selection}', '${randomQuestionNo}')" class="video-js vjs-fill" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
                     <source src="${dataset[selection].questions[randomQuestionNo].video}" type="application/x-mpegURL">
                 </video>
             </div>`;
