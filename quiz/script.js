@@ -1285,6 +1285,7 @@ function showForm() {
         </div>`
     })
     document.getElementById('fieldsDiv').innerHTML = fieldsDiv;
+    document.getElementById('formDiv').style.display = 'block';
 }
 
 function closeForm() {
