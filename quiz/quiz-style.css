@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+/* bolier plate code */
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.733vw;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+  }
+
+a {
+    text-decoration: none;
+    color: #0c0f12;
+    font-weight: 600;
+    color: #e40000 !important;
+  }
+
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+/* safari end  */
+
+video::-webkit-media-controls {
+    display: none;
+  }
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+  }
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;
+  }
+
+/* Boiler plate code end */
+
+/* main object code begins */
+
+.container {
+    width: fit-content;
+    height: fit-content;
+  }
+
+.frame {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 65%;
+    margin: 0 auto;
+  }
+
+.video-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 390px;
+    height: 693.3px;
+  }
+
+.videos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+ 
+.video {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+.video video {
+    border-radius: 30px;
+    width: 100%;
+  }
+
+/* the section contains the code for video header */
+.header_section {
+    position: relative;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 2;
+  }
+  .header_section img {
+    opacity: 1;
+    height: 30px;
+    margin-bottom: 12px;
+  }
+
+  .icons-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* .header_section #speaker {
+    float: right;
+    width: 30px;
+  } */
+
+/* video Header Section Ends Here */
+
+/* options styling and placement  */
+.options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.currentOptions {
+    text-align: center;
+    color: white;
+}
+.question{
+    padding: 10px;
+    max-height: fit-content;
+    font-size: 30px;
+    overflow: auto;
+}
+
+/* h tags sizes to be defined here */
+.question h3{
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 20px black;
+    font-weight: 600;
+}
+.question h4{
+    font-size: 16px;
+    line-height: 25px;
+    text-shadow: 2px 2px 20px black;
+}
+/* h tags definination ends here */
+
+.answers{
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 12px;
+    justify-content: center;
+}
+.options button{
+    font-size: 16px;
+    padding: 10px 0;
+    line-height: unset;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+    border: none;
+    color: #0c0f12;
+    /* padding: 3.2vw; */
+    text-align: center;
+    /* font-size: 3.733vw;
+    line-height: 5.333vw; */
+    cursor: pointer;
+    flex: 0 0 calc(50% - 2.133vw);
+    box-shadow: -1.067vw 4.8vw 7.467vw rgb(41 44 79 / 20%);
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 8px;
+    padding: 20px 0;
+}
+.answers .bottom-text span {
+    padding: 5px;
+    font-style: italic;
+    color: #2e476e;
+    border-radius: 5px;
+}
+
+/* Media quires for mobile are in this section */
+
+@media (max-width: 640px) {
+    .container {
+      width: 100%;
+      height: 100%;
+    }
+    .video-container {
+      width: 100%;
+      height: 100vh;
+    }
+    .frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #020102;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #020102;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .video-container .video .countdown {
+      width: 100%;
+      left: 0;
+      margin: 0;
+    }
+    .countdown {
+        position: absolute;
+        top: 0;
+        height: 5px;
+        background-color: #ff0066;
+    }
+    .video video {
+      border-radius: 0;
+      object-fit: cover;
+      height: 100%;
+    }
+    .form .form-content {
+      height: 100vh;
+      justify-content: space-between;
+      border: 0;
+    }
+    .video-container .options .answers {
+      margin-top: 12px;
+    }
+    .form .form-content {
+        height: 100vh;
+        justify-content: space-between;
+        border: 0;
+      }
+  }
+  
+  /* media quries for mobile end here  */
+
+  /* media quries for tablets are in this section */
+
+@media (min-width: 641px) and (max-width: 1007px) {
+
+    /* this section manages frame sizes and styling for tablets */
+    .frame {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 100%;
+    }
+    /*frame sizes and styling ends here */
+  
+    /* this section is to manage the styling of tablet text content */
+    
+    .video-container {
+      width: 288px;
+      height: 512px;
+    }
+    .frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    .video-container .video .countdown{
+      width: 100%;
+      left: 0;
+      margin: 0;
+    }
+    .countdown {
+        position: absolute;
+        top: 0;
+        height: 5px;
+        background-color: #ff0066;
+    }
+    .video-container .video video {
+      border-radius: 30px;
+      object-fit: cover;
+      height: 100%;
+    }
+    
+    .video-container .options .answers {
+      margin-top: 12px;
+    }
+    .form .form-content {
+        height: 100vh;
+        justify-content: space-between;
+        border: 0;
+      }
+  }
+  
+  /* media quries for tablets end here */
+  
