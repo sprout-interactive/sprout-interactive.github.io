@@ -212,6 +212,51 @@ video::-webkit-media-controls-panel {
     border-radius: 5px;
 }
 
+.form-content button{
+  display: flex;
+    width: 90%;
+    height: 40px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.form-text{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 20px;
+  background-image: url("./assets/test_background.jpg");
+  background-size: 100%;
+    height: 240px;
+    margin-bottom: 20px
+}
+.form-client-logo{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.form-client-logo img{
+  width: 90%;
+}
+.fields{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+.form-group{
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label{
+  margin-bottom: 4px;
+}
+.form-group input{
+  height: 40px;
+}
+
+
 /* Media quires for mobile are in this section */
 
 @media (max-width: 640px) {
