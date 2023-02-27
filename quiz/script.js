@@ -1365,7 +1365,6 @@ function nextVideo(selection, moderator, sponsor=true) {
             </div>`;
         }
     }
-    // need to change numbers
     videojs(`quiz-${selection}`).ready(function() {
         this.player_.controls(false);
     });
