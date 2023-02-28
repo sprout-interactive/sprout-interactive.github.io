@@ -41,27 +41,30 @@ const bottomText = `
                     </div>
                 </div>
     		</div>
-            <div class="form" id="formDiv">
-                <div class="form-content">
-                    <div class="textOnForm">
-                        <div class="form-text" style="display: flex; justify-content: space-between;">
-                            <img src="./assets/logo-dark.svg">
-                            <img src="./assets/close.png" onclick="closeForm()">
-                        </div>
-                    </div>
-                    <div class="fields" id="fieldsDiv">
-                        
-                    </div>
-                    <button type="button" class="submit" value="submit" onclick="sendInfo()">Submit</button>
-                </div>
-            </div>
+          <div class="form" id="formDiv">
+          <div class="form-content">
+              <div class="textOnForm">
+                  <div class="form-text">
+                      <img src="./assets/close.svg" onclick="closeForm()">
+                  </div>
+                  <div class="form-client-logo">
+                  <h4>Get In Touch</h4>
+                  </div>
+              </div>
+              <div class="fields" id="fieldsDiv">
+                  
+              </div>
+              <button type="button" class="submit" value="submit" onclick="sendInfo()">Submit</button>
+          </div>
+      </div>
             <div class="formStatus" id="formStatusDiv">
                 <p id="status"></p>
             </div>
         </div>`
     );
 })();
-
+// <img src="./assets/logo-dark.svg">
+// style="display: flex; justify-content: space-between;"
 videojs("background").ready(function(){
    this.player_.controls(false);
 });
