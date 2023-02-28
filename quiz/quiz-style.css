@@ -291,6 +291,12 @@ video::-webkit-media-controls-panel {
   background-color:#f2f6fb;
   outline-color: #0049b7;
 }
+#formDiv {
+  display: none;
+  position: absolute;
+  top: 0px;
+  width: 100%;   
+}
 
 /* form styling end */
 
@@ -343,9 +349,6 @@ video::-webkit-media-controls-panel {
       height: 100vh;
       justify-content: space-between;
       border: 0;
-    }
-    #formDiv {
-      display: none;        
     }
     .video-container .options .answers {
       margin-top: 12px;

@@ -1292,6 +1292,7 @@ function showForm() {
 }
 
 function closeForm() {
+    document.getElementById('formDiv').style.display = 'none';
     document.getElementById('frameDiv').style.display = 'block';
 }
 
