@@ -112,7 +112,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/37ca96d1-15cb-41fe-8f4a-97604dcb9935/playlist.m3u8",
-               "question": "Alia Bhatt hold a passport of foreign nation, which is it?",
+               "question": "Alia Bhatt holds a passport of foreign nation, which is it?",
                "options": [
                   "UK",
                   "Canada",
@@ -145,7 +145,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/e1f64791-a0d9-41b6-8cd6-228642b132f0/playlist.m3u8",
-               "question": "Barsaat was one of the hit movies directed by Raj Kapoor, Who starred opposite Raj Kapoor in the movie?",
+               "question": "Barsaat was one of the hit movies directed by Raj Kapoor, who starred opposite Raj Kapoor in the movie?",
                "options": [
                   "Nargis",
                   "Nadira",
@@ -167,7 +167,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/7f79f5b2-2983-4c65-ab60-2b1a8fea8400/playlist.m3u8",
-               "question": "Bollywood superstar shahrukh khan, played a villain in which film?",
+               "question": "Bollywood superstar Shahrukh Khan, played a villain in which film?",
                "options": [
                   "Darr",
                   "Josh",
@@ -226,7 +226,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/7a6f929b-f4b3-47b1-bbbe-b191eb0e08b1/playlist.m3u8",
-               "question": "Former India captain holds the ranks of LT Colonel in the Indian Army, and was the second person to achieve the same, who is he ?",
+               "question": "Former Indian captain holds the ranks of LT Colonel in the Indian Army, and was the second person to achieve the same, who is he?",
                "options": [
                   "MS Dhoni",
                   "Gautam Gambhir",
@@ -360,17 +360,17 @@ window.onload = async (event) => {
                ],
                "correct": "Dhano"
             },
-            {
-               "video": "https://vz-09c53bdb-c9e.b-cdn.net/d228a8a3-521e-402f-8f21-395c860a0e18/playlist.m3u8",
-               "question": "In 1903 this woman made history, by winning the first nobel prize as a female, who is she?",
-               "options": [
-                  "Marie Curie",
-                  "Lise Meitner",
-                  "IrÃ¨ne Curie-Joliot",
-                  "Barbara McClintock"
-               ],
-               "correct": "Marie Curie"
-            },
+            // {
+            //    "video": "https://vz-09c53bdb-c9e.b-cdn.net/d228a8a3-521e-402f-8f21-395c860a0e18/playlist.m3u8",
+            //    "question": "In 1903 this woman made history, by winning the first nobel prize as a female, who is she?",
+            //    "options": [
+            //       "Marie Curie",
+            //       "Lise Meitner",
+            //       "IrÃ¨ne Curie-Joliot",
+            //       "Barbara McClintock"
+            //    ],
+            //    "correct": "Marie Curie"
+            // },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/a7c3e562-4178-4b77-a812-c3210850e161/playlist.m3u8",
                "question": "In 1930 which country won the first ever fifa world cup?",
@@ -384,7 +384,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/8f7e4c28-79ea-41e5-8a78-decd91535e25/playlist.m3u8",
-               "question": "In 2009 Siddharth Malhotra had a small role in this Tv show, what's the name of the tv show?",
+               "question": "In 2009 Siddharth Malhotra had a small role in this TV show, what's the name of the tv show?",
                "options": [
                   "Dharti Ka Veer Yodha Prithviraj Chauhan.",
                   "Taarak Mehta Ka Ooltah Chashmah",
@@ -406,7 +406,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/44804337-31e1-4c09-a1d9-c184296aedb8/playlist.m3u8",
-               "question": "In our solar system which planet has the highest gravity ?",
+               "question": "In our solar system which planet has the highest gravity?",
                "options": [
                   "Jupiter",
                   "Saturn",
@@ -421,7 +421,7 @@ window.onload = async (event) => {
          "questions": [
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/4806a6e7-3fd8-4ff2-b627-630516ca8462/playlist.m3u8",
-               "question": "In the Epic ramayana who tried to kill Rama?",
+               "question": "In the Epic Ramayana who tried to kill Rama?",
                "options": [
                   "Parashurama",
                   "Bharat",
@@ -432,7 +432,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/a304aa34-6d5d-4bcb-a919-65558c5d051d/playlist.m3u8",
-               "question": "In the inaugural season of the IPL, Kings XI Punjab had a punjabi pop singer as their brand ambassador, who was he?",
+               "question": "In the inaugural season of the IPL, Kings XI Punjab had a Punjabi pop singer as their brand ambassador, who was he?",
                "options": [
                   "Daler Mehndi",
                   "Mika singh",
@@ -476,7 +476,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/776c7f82-0701-4871-8b54-6a1c281fcafa/playlist.m3u8",
-               "question": "In what year did steve jobs release the first Iphone?",
+               "question": "In what year did Steve Jobs release the first Iphone?",
                "options": [
                   "2007",
                   "2008",
@@ -535,7 +535,7 @@ window.onload = async (event) => {
          "questions": [
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/1476afa4-d555-4c04-b208-870b50539155/playlist.m3u8",
-               "question": "In which martial arts is rajkumar rao trained in?",
+               "question": "In which martial arts is Rajkumar Rao trained in?",
                "options": [
                   "Taekwondo",
                   "karate",
@@ -557,7 +557,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/4c580112-2a17-4ac8-9021-463750e67139/playlist.m3u8",
-               "question": "Karishma & Kareena Kapoor's grandmother was not india, which country did she belong to ?",
+               "question": "Karishma & Kareena Kapoor's grandmother was not Indian, which country did she belong to?",
                "options": [
                   "UK",
                   "USA",
@@ -568,7 +568,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/f19330e4-f9e7-4593-8c77-bbff7e0e13be/playlist.m3u8",
-               "question": "Nagrath, is the official last name of this bollywood family however they use a different last name, what is the pusod name used by them?",
+               "question": "Nagrath, is the official last name of this Bollywood family however they use a different last name, what is the surname used by them?",
                "options": [
                   "Roshan",
                   "Kapoor",
@@ -579,7 +579,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/89055d93-c22b-4379-905c-0efdfde8d5f4/playlist.m3u8",
-               "question": "Name the country in south america which spans more than half of its western coast?",
+               "question": "Name the country in South America which spans more than half of its western coast",
                "options": [
                   "Chile",
                   "Brazil",
@@ -590,7 +590,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/ee66fe85-1ccb-4559-9e47-65d54a07ca47/playlist.m3u8",
-               "question": "Pankaj Tripathi, once stole a pair of slipper from an actor, how is he?",
+               "question": "Pankaj Tripathi, once stole a pair of slipper from an actor, who is he?",
                "options": [
                   "Manoj Bajpayee",
                   "Raj Kumar Rao",
@@ -601,7 +601,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/9c196905-73e2-4c90-9de0-e0651c680a11/playlist.m3u8",
-               "question": "penicillin was a life saving drug, who discovered it?",
+               "question": "Penicillin was a life saving drug, who discovered it?",
                "options": [
                   "Alexander Fleming",
                   "John Collins Warren",
@@ -612,7 +612,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/9ddb7acc-06a4-4ec8-bf58-d7788b45c72f/playlist.m3u8",
-               "question": "Rajasthan Royals won the first IPL in 2008, Who was their captain?",
+               "question": "Rajasthan Royals won the first IPL in 2008, who was their captain?",
                "options": [
                   "Warne",
                   "Watson",
@@ -671,7 +671,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/00101a41-22f6-49cf-8485-18131c018076/playlist.m3u8",
-               "question": "The first century in IPL was scored in the very first game, who Scored it ?",
+               "question": "The first century in IPL was scored in the very first game, who scored it?",
                "options": [
                   "Brendon McCullum",
                   "Chris Gayle",
@@ -704,7 +704,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/f8a9bf72-3512-4d12-8197-a9ffab755ba4/playlist.m3u8",
-               "question": "This bowler took the first hattrick in IPL, Who is he?",
+               "question": "This bowler took the first hattrick in IPL, who is he?",
                "options": [
                   "Laxmipathy Balaji",
                   "Yuvraj Singh",
@@ -715,7 +715,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/6db2918c-7773-4163-94d1-d23c6c5f07e9/playlist.m3u8",
-               "question": "This cricketer was the first active cricketer to be nominated to rajya sabha, who was he?",
+               "question": "This cricketer was the first active cricketer to be nominated to Rajya Sabha, who was he?",
                "options": [
                   "Sachin Tendulkar",
                   "Kirti Azad",
@@ -748,7 +748,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/71b200fb-c651-434c-97db-aa0396a3bcde/playlist.m3u8",
-               "question": "What age in Indian History is referred to as the 'Golden Age'?",
+               "question": "What age in Indian history is referred to as the 'Golden Age'?",
                "options": [
                   "Gupta",
                   "Chalukya",
@@ -772,20 +772,20 @@ window.onload = async (event) => {
                ],
                "correct": "twttr"
             },
-            {
-               "video": "https://vz-09c53bdb-c9e.b-cdn.net/d5cc7a74-fea8-426f-ba8f-aced920f067d/playlist.m3u8",
-               "question": "Whatâs the shortcut for the âcopyâs cricket match recorded?",
-               "options": [
-                  "1745",
-                  "1760",
-                  "1900",
-                  "1977"
-               ],
-               "correct": "1745"
-            },
+            // {
+            //    "video": "https://vz-09c53bdb-c9e.b-cdn.net/d5cc7a74-fea8-426f-ba8f-aced920f067d/playlist.m3u8",
+            //    "question": "Whatâs the shortcut for the âcopyâs cricket match recorded?",
+            //    "options": [
+            //       "1745",
+            //       "1760",
+            //       "1900",
+            //       "1977"
+            //    ],
+            //    "correct": "1745"
+            // },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/a2fd696c-4dea-4129-9644-68b033fb64ba/playlist.m3u8",
-               "question": "Where was the Final of the 2009 IPL held?",
+               "question": "Where was the final of the 2009 IPL held?",
                "options": [
                   "New Wanderers Stadium, Johannesburg",
                   "New Wanderers Stadium, Johannesburg",
@@ -823,7 +823,7 @@ window.onload = async (event) => {
                   "The Pontiac GTO",
                   "Ford Mustang",
                   "Chevrolet Camaro",
-                  "Changer"
+                  "Dodge Charger"
                ],
                "correct": "The Pontiac GTO"
             },
@@ -965,7 +965,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/f65c1f50-8aec-4d60-acd0-9bea8aa7c7d1/playlist.m3u8",
-               "question": "Which was the first production house Parineeti chopra worked with as a PR consultant?",
+               "question": "Which was the first production house Parineeti Chopra worked with as a PR consultant?",
                "options": [
                   "YRF",
                   "Dharma Productions",
@@ -976,7 +976,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/61479d39-ba91-4d9a-933b-da6935b1cd5d/playlist.m3u8",
-               "question": "Who directed the first ever Indian Feature Film, Raja Harishchandra?",
+               "question": "Who directed the first ever Indian feature film, Raja Harishchandra?",
                "options": [
                   "Dadasaheb Phalke",
                   "Dadasaheb Torne",
@@ -1013,7 +1013,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/c916f774-0ab6-451c-9187-0a759a25fb32/playlist.m3u8",
-               "question": "who is the founder of Ebay?",
+               "question": "Who is the founder of Ebay?",
                "options": [
                   "Pierre Omidyar",
                   "steve wozniak",
@@ -1090,7 +1090,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/7556a178-d854-4309-8240-0510f3b744df/playlist.m3u8",
-               "question": "Who was the first bollywood superstar selected as a jury member for cannes film festival?",
+               "question": "Who was the first Bollywood superstar selected as a jury member for Cannes film festival?",
                "options": [
                   "Aishwarya Rai",
                   "Amitabh Bachchan",
@@ -1116,7 +1116,7 @@ window.onload = async (event) => {
          "questions": [
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/9f962ddc-9741-4091-b9e1-5454f1c004ce/playlist.m3u8",
-               "question": "Who was the general of alexander the great whose daughter married Chandragupta maurya?",
+               "question": "Who was the general of Alexander the Great whose daughter married Chandragupta Maurya?",
                "options": [
                   "Seleukos Nikator",
                   "Cassander",
@@ -1138,7 +1138,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/13f0ffdd-2ec7-4f31-b2eb-c4c374407ab9/playlist.m3u8",
-               "question": "Who was the legendary wwe star known as the people's champion?",
+               "question": "Who was the legendary WWE star known as the people's champion?",
                "options": [
                   "The Rock",
                   "John Cena",
@@ -1160,7 +1160,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/3f8f3813-482f-4c19-afbf-558c8c8ba3bf/playlist.m3u8",
-               "question": "world famous athlete Usain Bolt was involved in which sport ?",
+               "question": "World famous athlete Usain Bolt was involved in which sport?",
                "options": [
                   "100m sprint",
                   "long Jump",
@@ -1171,7 +1171,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/52d398c4-8ce1-46e8-8a68-901980f0aaac/playlist.m3u8",
-               "question": "Do you know who is MS Dhoni's favourite wwe wrestler?",
+               "question": "Do you know who is MS Dhoni's favourite WWE wrestler?",
                "options": [
                   "Hulk Hogan",
                   "The Rock",
@@ -1197,7 +1197,7 @@ window.onload = async (event) => {
        "won": {
             "video": "https://vz-09c53bdb-c9e.b-cdn.net/95f2ef98-4805-4a69-81d0-df1b4d7e1336/playlist.m3u8",
             "message": "Winning message",
-            "option": "Enter deets",
+            "option": "Provide details",
             "link": "https://www.jugnuplaygames.com/contact-8"
        },
        "time": {
@@ -1319,7 +1319,7 @@ function nextVideo(selection, moderator, sponsor=true) {
                 <h4>${dataset[selection].message}</h4>
             </div>
             <div class="answers">
-                <button type="button" onclick=${dataset[selection].link ? "openInNewTab('"+dataset[selection].link+"')" : "nextVideo('1',false)"}>${dataset[selection].option}</button>
+                <button type="button" onclick=${dataset[selection].link ? "showForm()" : "nextVideo('1',false)"}>${dataset[selection].option}</button>
                 ${bottomText}
             </div>`;
         document.getElementById('optionsDiv').style.display = 'flex';
@@ -1378,7 +1378,9 @@ function nextVideo(selection, moderator, sponsor=true) {
 function nextQuestion(question, selection, randomQuestionNo) {
     let selectionOptions = '';
     let questions = dataset[selection].questions;
-    questions[randomQuestionNo].options.forEach((o) => {
+    let options = questions[randomQuestionNo].options;
+    options = shuffleOptions(options);
+    options.forEach((o) => {
         let stage = parseInt(selection, 10);
         stage = (stage + 1).toString();
         if (o === questions[randomQuestionNo].correct){
@@ -1418,12 +1420,20 @@ function startTimer() {
         if (count == 0) {
             stopTimer();
             nextVideo('time', false);
-        } 
+        }
         else {
             count--;
             document.getElementsByClassName('countdown')[0].style.width = count + '%';
         }
     }, 100);
+}
+
+function shuffleOptions(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 function stopTimer() {
