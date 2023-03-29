@@ -196,9 +196,9 @@ window.onload = async (event) => {
                "question": "By what name were the Egyptian kings/rulers known?",
                "options": [
                   "Pharaohs",
-                  "Pharaohs",
-                  "Pharaohs",
-                  "Pharaohs"
+                  "Emperors",
+                  "Sultan",
+                  "Kaiser"
                ],
                "correct": "Pharaohs"
             },
@@ -1186,10 +1186,10 @@ window.onload = async (event) => {
             "video": "https://vz-09c53bdb-c9e.b-cdn.net/6c186e8e-03d9-4e30-9822-50a63c7d50e1/playlist.m3u8"
        },
        "sponsor1": {
-            "video": "https://vz-09c53bdb-c9e.b-cdn.net/95f2ef98-4805-4a69-81d0-df1b4d7e1336/playlist.m3u8"
+            "video": "https://vz-09c53bdb-c9e.b-cdn.net/01a42d16-1254-4ed7-bd87-8fc6c21283f5/playlist.m3u8"
        },
        "sponsor2": {
-            "video": "https://vz-09c53bdb-c9e.b-cdn.net/95f2ef98-4805-4a69-81d0-df1b4d7e1336/playlist.m3u8"
+            "video": "https://vz-09c53bdb-c9e.b-cdn.net/7ac66a34-87b7-4aba-a09e-b5d92d4a4763/playlist.m3u8"
        },
        "sponsor3": {
             "video": "https://vz-09c53bdb-c9e.b-cdn.net/95f2ef98-4805-4a69-81d0-df1b4d7e1336/playlist.m3u8"
@@ -1201,24 +1201,24 @@ window.onload = async (event) => {
             "link": "https://www.jugnuplaygames.com/contact-8"
        },
        "time": {
-            "video": "https://vz-09c53bdb-c9e.b-cdn.net/31cd4992-185b-4097-96ab-3c196ea6167e/playlist.m3u8",
-            "message": "Time up message",
-            "option": "Try again"
+            "video": "https://vz-09c53bdb-c9e.b-cdn.net/fc3fc38f-3aa4-4c2a-87b3-e3e053c62c6b/playlist.m3u8",
+            "message": "Click On The Button Below To Try Again",
+            "option": "Play Again"
        },
        "wrong1": {
             "video": "https://vz-09c53bdb-c9e.b-cdn.net/0c3e4889-971a-41e4-a658-ab88d7e0eec7/playlist.m3u8",
-            "message": "Wrong message page 1",
+            "message": "Sorry you did not clear stage 1",
             "option": "Try again"
        },
        "wrong2": {
-            "video": "https://vz-09c53bdb-c9e.b-cdn.net/31cd4992-185b-4097-96ab-3c196ea6167e/playlist.m3u8",
-            "message": "Wrong message page 2",
+            "video": "https://vz-09c53bdb-c9e.b-cdn.net/0c3e4889-971a-41e4-a658-ab88d7e0eec7/playlist.m3u8",
+            "message": "Well you can do better, you won the stage 1 prize but stage 2 was a little too diffcult for you",
             "option": "Claim gift",
             "link": "https://www.google.com"
        },
        "wrong3": {
-            "video": "https://vz-09c53bdb-c9e.b-cdn.net/31cd4992-185b-4097-96ab-3c196ea6167e/playlist.m3u8",
-            "message": "Wrong message page 3",
+            "video": "https://vz-09c53bdb-c9e.b-cdn.net/0c3e4889-971a-41e4-a658-ab88d7e0eec7/playlist.m3u8",
+            "message": "Doing good, you won the stage 2 prize but stage 3 was a bit harder",
             "option": "Claim gift",
             "link": "https://www.google.com"
        },
