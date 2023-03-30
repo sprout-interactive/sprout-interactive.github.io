@@ -90,7 +90,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/d054244c-2d7e-42b8-8431-16a77a27b774/playlist.m3u8",
-               "question": "What is the name of Ritesh Deshmukh's character in \"Dhamaal\"?",
+               "question": "What is the name of Ritesh Deshmukh's character in Dhamaal?",
                "options": [
                   "Roy",
                   "Rajesh",
@@ -351,7 +351,7 @@ window.onload = async (event) => {
             },
             {
                "video": "https://vz-09c53bdb-c9e.b-cdn.net/1fd5bb35-c021-48ff-b2ba-a94219f4230f/playlist.m3u8",
-               "question": "In \"Sholay\", what was the name of Basanti's horse?",
+               "question": "In Sholay, what was the name of Basanti's horse?",
                "options": [
                   "Dhano",
                   "Dhano",
