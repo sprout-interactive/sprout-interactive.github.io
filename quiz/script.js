@@ -1230,12 +1230,12 @@ window.onload = async (event) => {
             },
             {
                 "type": "email",
-                "identifier": "emailid",
+                "identifier": "email",
                 "label": "Email Address"
             },
             {
                 "type": "number",
-                "identifier": "phone",
+                "identifier": "mobile",
                 "label": "Phone number"
             }
        ]
@@ -1284,7 +1284,7 @@ function showForm() {
     dataset.form.forEach(element => {
         fieldsDiv += `<div class="form-group">
             <label for="${element.identifier}">${element.label}:</label>
-            <input type="${element.type}" class="field" name="${element.identifier}">
+            <input type="${element.type}" class="field" id="${element.identifier}" name="${element.identifier}">
         </div>`
     })
     document.getElementById('fieldsDiv').innerHTML = fieldsDiv;
@@ -1294,6 +1294,29 @@ function showForm() {
 function closeForm() {
     document.getElementById('formDiv').style.display = 'none';
     document.getElementById('frameDiv').style.display = 'block';
+}
+
+function sendInfo() {
+    let dataObj = { date: new Date().toISOString() };
+    dataset.form.forEach(element => {
+        dataObj[element.identifier] = document.getElementById(element.identifier).value;
+    })
+    console.log(dataObj)
+    fetch('https://k90nmo1jz3.execute-api.ap-south-1.amazonaws.com/v1/collect-lead/', {
+        method: 'post',
+        body: JSON.stringify(dataObj),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then((response) => {
+        return response.json()
+    }).then((res) => {
+        if (res.status === 200) {
+            console.log("Post successfully created!")
+        }
+    }).catch((error) => {
+        console.log(error)
+    })
 }
 
 function nextVideo(selection, moderator, sponsor=true) {
