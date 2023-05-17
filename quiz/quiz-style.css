@@ -222,6 +222,7 @@ video::-webkit-media-controls-panel {
 }
 .form-content{
   width: 390px;
+  padding: 10px;
 }
 .form-content button{
   display: flex;
@@ -255,11 +256,11 @@ video::-webkit-media-controls-panel {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 20px;
-  background-image: url("./assets/test_background.jpg");
-  background-size: 100%;
-    height: 240px;
-    margin-bottom: 20px
+  padding: 10px;
+  /* background-image: url("./assets/test_background.jpg");
+  background-size: 100%; */
+    /* height: 240px; */
+    /* margin-bottom: 20px */
 }
 .form-client-logo{
   display: flex;
@@ -301,9 +302,10 @@ video::-webkit-media-controls-panel {
 }
 #formDiv {
   display: none;
-  position: absolute;
+  /* position: absolute; */
   top: 0px;
   width: fit-content;   
+  border-radius: 20px;
 }
 
 /* form styling end */
@@ -374,7 +376,7 @@ video::-webkit-media-controls-panel {
         position: absolute;
         top: 0px;
         width: 100%;
-        
+        border-radius: 0px;
       }
   }
   
@@ -437,7 +439,8 @@ video::-webkit-media-controls-panel {
       margin-top: 12px;
     }
     .form .form-content {
-        height: 100vh;
+        /* height: 100vh; */
+        height: fit-content;
         justify-content: space-between;
         border: 0;
     }

@@ -48,7 +48,7 @@ const bottomText = `
                       <img src="./assets/close.svg" onclick="closeForm()">
                   </div>
                   <div class="form-client-logo">
-                  <h4>Get In Touch</h4>
+                  <h4>Get In Touch 👋</h4>
                   </div>
               </div>
               <div class="fields" id="fieldsDiv">

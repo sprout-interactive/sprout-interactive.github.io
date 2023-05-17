@@ -67,6 +67,7 @@
     .Main-Wrapper{
         width: 100%;
         height: 100%;
+        background: none;
     }
     .main-header{
         display: none;
