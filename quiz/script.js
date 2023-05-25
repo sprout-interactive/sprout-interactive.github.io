@@ -1,6 +1,7 @@
 let interval;
 let dataset;
 let mute = 'muted';
+let active = false;
 
 const bottomText = `
     <div class="bottom-text">
@@ -9,65 +10,84 @@ const bottomText = `
 
 (function () {
     return document.write(
-        `<div class="container">
-            <div class="frame" id="frameDiv">
-                <div class="video-container">
-                    <div class="videos" id="videosDiv">
-                        <div class="video">
-                            <video id="background" class="video-js vjs-fill" autoplay="true" preload="auto" loop="true" playsinline muted>
-                                <source src="https://vz-09c53bdb-c9e.b-cdn.net/c207610e-3108-4a9a-903d-c9165dfdf69b/playlist.m3u8" type="application/x-mpegURL">
-                            </video>
-                        </div>
+        `<div id="interactive-interface"> 
+            <div id="trigger" onclick="initiateInterface()">
+                <img src="https://images.immediate.co.uk/production/volatile/sites/3/2018/08/Simpsons_SO28_Gallery_11-fb0b632.jpg?quality=90&resize=800,534" style="height: 40px; width: 60px;">
+            </div>
+        </div>`
+    )
+})();
+
+function initiateInterface() {
+    active = true;
+    document.getElementById("interactive-interface").innerHTML = `<div class="container">
+        <div class="frame" id="frameDiv">
+            <div class="video-container">
+                <div class="close-interactive-interface" onclick="closeInterface()">
+                    <img src="./assets/close.svg" style="height: 25px;">
+                </div>
+                <div class="videos" id="videosDiv">
+                    <div class="video">
+                        <video id="background" class="video-js vjs-fill" autoplay="true" preload="auto" loop="true" playsinline muted>
+                            <source src="https://vz-09c53bdb-c9e.b-cdn.net/c207610e-3108-4a9a-903d-c9165dfdf69b/playlist.m3u8" type="application/x-mpegURL">
+                        </video>
                     </div>
-                    <div class="header_section">
-                        <img id="logo" src="./assets/logo-dark.svg">
-                        <div class="icons-wrapper">
-                            <img id="speaker" src="./assets/mute.svg" onclick="toggleSound()">
-                            <img id="share" src="./assets/share.svg" onclick="shareLink()">
-                            <img id="contact" src="./assets/contact.svg" onclick="showForm()">
-                        </div>
+                </div>
+                <div class="header_section">
+                    <div class="icons-wrapper">
+                        <img id="speaker" src="./assets/mute.svg" onclick="toggleSound()">
+                        <img id="share" src="./assets/share.svg" onclick="shareLink()">
+                        <img id="contact" src="./assets/contact.svg" onclick="showForm()">
                     </div>
-                    <div class="options" id="optionsDiv">
-                        <div class="currentOptions" id="currentOptionsDiv">
-                            <div class="question">
-                                <h3>Welcome to the Quiz</h3>
-                                <h4>Play to win. Click below to get started</h4>
-                            </div>
-                            <div class="answers">
-                                <button type="button" value="1" onclick="nextVideo('1')">Get Started</button>
-                                ${bottomText}
-                            </div>
+                    <img id="logo" src="./assets/logo-dark.svg">
+                </div>
+                <div class="options" id="optionsDiv">
+                    <div class="currentOptions" id="currentOptionsDiv">
+                        <div class="question">
+                            <h3>Welcome to the Quiz</h3>
+                            <h4>Play to win. Click below to get started</h4>
+                        </div>
+                        <div class="answers">
+                            <button type="button" value="1" onclick="nextVideo('1')">Get Started</button>
+                            ${bottomText}
                         </div>
                     </div>
                 </div>
-    		</div>
-          <div class="form" id="formDiv">
-          <div class="form-content">
-              <div class="textOnForm">
-                  <div class="form-text">
-                      <img src="./assets/close.svg" onclick="closeForm()">
-                  </div>
-                  <div class="form-client-logo">
-                  <h4>Get In Touch</h4>
-                  </div>
-              </div>
-              <div class="fields" id="fieldsDiv">
-                  
-              </div>
-              <button type="button" class="submit" value="submit" onclick="sendInfo()">Submit</button>
-          </div>
-      </div>
-            <div class="formStatus" id="formStatusDiv">
-                <p id="status"></p>
             </div>
-        </div>`
-    );
-})();
-// <img src="./assets/logo-dark.svg">
-// style="display: flex; justify-content: space-between;"
-videojs("background").ready(function(){
-   this.player_.controls(false);
-});
+        </div>
+        <div class="form" id="formDiv">
+            <div class="form-content">
+                <div class="textOnForm">
+                    <div class="form-text">
+                        <img src="./assets/close.svg" onclick="closeForm()">
+                    </div>
+                    <div class="form-client-logo">
+                        <h4>Get In Touch</h4>
+                    </div>
+                </div>
+                <div class="fields" id="fieldsDiv">
+              
+                </div>
+                <button type="button" class="submit" value="submit" onclick="sendInfo()">Submit</button>
+            </div>
+        </div>
+        <div class="formStatus" id="formStatusDiv">
+            <p id="status"></p>
+        </div>
+    </div>`
+    videojs("background").ready(function(){
+       this.player_.controls(false);
+    });
+};
+
+function closeInterface() {
+    stopTimer();
+    videojs(getVideoId()).dispose();
+    active = false;
+    document.getElementById("interactive-interface").innerHTML = `<div id="trigger" onclick="initiateInterface()">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/3/2018/08/Simpsons_SO28_Gallery_11-fb0b632.jpg?quality=90&resize=800,534" style="height: 40px; width: 60px;">
+    </div>`
+}
 
 window.onload = async (event) => {
     var script = document.createElement("script");
