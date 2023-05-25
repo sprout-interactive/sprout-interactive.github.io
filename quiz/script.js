@@ -12,7 +12,7 @@ const bottomText = `
     return document.write(
         `<div id="interactive-interface"> 
             <div id="trigger" onclick="initiateInterface()">
-                <img src="https://images.immediate.co.uk/production/volatile/sites/3/2018/08/Simpsons_SO28_Gallery_11-fb0b632.jpg?quality=90&resize=800,534" style="height: 40px; width: 60px;">
+                <img src="./assets/logo-dark.svg" style="height: 40px; width: 60px;">
             </div>
         </div>`
     )
@@ -85,7 +85,7 @@ function closeInterface() {
     videojs(getVideoId()).dispose();
     active = false;
     document.getElementById("interactive-interface").innerHTML = `<div id="trigger" onclick="initiateInterface()">
-        <img src="https://images.immediate.co.uk/production/volatile/sites/3/2018/08/Simpsons_SO28_Gallery_11-fb0b632.jpg?quality=90&resize=800,534" style="height: 40px; width: 60px;">
+        <img src="./assets/logo-dark.svg" style="height: 40px; width: 60px;">
     </div>`
 }
 
