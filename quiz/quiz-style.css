@@ -132,8 +132,9 @@ video::-webkit-media-controls-panel {
     width: 100%;
     padding: 15px 20px;
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     z-index: 2;
+    justify-content: space-between;
   }
   .header_section img {
     opacity: 1;

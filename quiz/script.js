@@ -23,9 +23,6 @@ function initiateInterface() {
     document.getElementById("interactive-interface").innerHTML = `<div class="container">
         <div class="frame" id="frameDiv">
             <div class="video-container">
-                <div class="close-interactive-interface" onclick="closeInterface()">
-                    <img src="./assets/close.svg" style="height: 25px;">
-                </div>
                 <div class="videos" id="videosDiv">
                     <div class="video">
                         <video id="background" class="video-js vjs-fill" autoplay="true" preload="auto" loop="true" playsinline muted>
@@ -34,12 +31,14 @@ function initiateInterface() {
                     </div>
                 </div>
                 <div class="header_section">
+                     <img id="logo" src="./assets/logo-dark.svg">
                     <div class="icons-wrapper">
+                        <img src="./assets/close.svg" onclick="closeInterface()">
                         <img id="speaker" src="./assets/mute.svg" onclick="toggleSound()">
                         <img id="share" src="./assets/share.svg" onclick="shareLink()">
                         <img id="contact" src="./assets/contact.svg" onclick="showForm()">
                     </div>
-                    <img id="logo" src="./assets/logo-dark.svg">
+                    
                 </div>
                 <div class="options" id="optionsDiv">
                     <div class="currentOptions" id="currentOptionsDiv">
