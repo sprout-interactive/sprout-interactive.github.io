@@ -12,19 +12,18 @@ body {
     font-size: 3.733vw;
     font-weight: 400;
     line-height: 1.2;
-  }
+}
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
-  }
+}
 
 a {
     text-decoration: none;
     color: #0c0f12;
     font-weight: 600;
     color: #e40000 !important;
-  }
-
+}
 
 /* Safari */
 @-webkit-keyframes spin {
@@ -34,27 +33,16 @@ a {
     100% {
       -webkit-transform: rotate(360deg);
     }
-  }
-  @keyframes spin {
+}
+@keyframes spin {
     0% {
       transform: rotate(0deg);
     }
     100% {
       transform: rotate(360deg);
     }
-  }
+}
 /* safari end  */
-
-video::-webkit-media-controls {
-    display: none;
-  }
-video::-webkit-media-controls-start-playback-button {
-    display: none;
-  }
-video::-webkit-media-controls-panel {
-    display: none !important;
-    opacity: 1 !important;
-  }
 
 /* Boiler plate code end */
 
@@ -88,7 +76,7 @@ video::-webkit-media-controls-panel {
     height: 695px;
     width: 390px;
     border-radius: 5px;
-  }
+}
 
 .frame {
     display: flex;
@@ -97,7 +85,7 @@ video::-webkit-media-controls-panel {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-  }
+}
 
 .video-container {
     position: relative;
@@ -105,7 +93,7 @@ video::-webkit-media-controls-panel {
     left: 0;
     width: 390px;
     height: 695px;
-  }
+}
 
 .videos {
     position: absolute;
@@ -114,13 +102,13 @@ video::-webkit-media-controls-panel {
     width: 100%;
     height: 100%;
     z-index: 0;
-  }
+}
  
 .video {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-  }
+}
 
 .video video {
     width: 100%;
@@ -132,27 +120,21 @@ video::-webkit-media-controls-panel {
     width: 100%;
     padding: 60px 20px;
     display: flex;
-    /* flex-direction: row-reverse; */
     z-index: 2;
     justify-content: space-between;
   }
-  .header_section img {
+.header_section img {
     opacity: 1;
     height: 30px;
     margin-bottom: 12px;
-  }
+}
 
-  .icons-wrapper{
+.icons-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 30%;
-  }
-  /* .header_section #speaker {
-    float: right;
-    width: 30px;
-  } */
-
+}
 /* video Header Section Ends Here */
 
 /* options styling and placement  */
@@ -194,7 +176,7 @@ video::-webkit-media-controls-panel {
 }
 /* h tags definination ends here */
 
-.answers{
+.answers {
     padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
@@ -202,7 +184,7 @@ video::-webkit-media-controls-panel {
     margin-top: 12px;
     justify-content: center;
 }
-.options button{
+.options button {
     font-size: 16px;
     padding: 10px 0;
     line-height: unset;
@@ -210,10 +192,7 @@ video::-webkit-media-controls-panel {
     background-color: #fafafa;
     border: none;
     color: #0c0f12;
-    /* padding: 3.2vw; */
     text-align: center;
-    /* font-size: 3.733vw;
-    line-height: 5.333vw; */
     cursor: pointer;
     flex: 0 0 calc(50% - 2.133vw);
     box-shadow: -1.067vw 4.8vw 7.467vw rgb(41 44 79 / 20%);
@@ -221,6 +200,9 @@ video::-webkit-media-controls-panel {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.options .cta button {
+    background-color: #00ccff;
 }
 .bottom-text {
     display: flex;
@@ -239,10 +221,10 @@ video::-webkit-media-controls-panel {
 /* form styling start */
 
 .form{
-  background: #f6f6f6;
+    background: #f6f6f6;
 }
 .form-content button{
-  display: flex;
+    display: flex;
     width: 90%;
     height: 40px;
     margin-left: 20px;
@@ -322,12 +304,10 @@ video::-webkit-media-controls-panel {
   height: 695px;
   overflow-y: scroll;
 }
-
 /* form styling end */
 
 
 /* Media quires for mobile are in this section */
-
 @media (max-width: 640px) {
     .container {
       width: 100%;
@@ -383,19 +363,15 @@ video::-webkit-media-controls-panel {
     #formDiv {
         height: 100%;
     }
-  }
-  
-  /* media quries for mobile end here  */
+}
+/* media quries for mobile end here  */
 
-  /* media quries for tablets are in this section */
-
+/* media quries for tablets are in this section */
 @media (min-width: 641px) and (max-width: 1007px) {
-
     .container {
         height: 800px;
         width: 420px;
     }
-
     /* this section manages frame sizes and styling for tablets */
     .frame {
       display: flex;
@@ -407,7 +383,6 @@ video::-webkit-media-controls-panel {
     /*frame sizes and styling ends here */
   
     /* this section is to manage the styling of tablet text content */
-    
     .video-container {
       width: 100%;
       height: 100%;
@@ -457,6 +432,5 @@ video::-webkit-media-controls-panel {
       height: 100%;
     }
   }
-  
   /* media quries for tablets end here */
   
