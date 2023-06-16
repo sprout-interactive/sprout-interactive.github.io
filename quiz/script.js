@@ -8,7 +8,19 @@ const bottomText = `
         <span>Powered By Sprout</span>
     </div>`;
 
-(function () {
+// (function() {
+//     fetch(`https://ourauthbackend.com/widget?url=${window.location.href}`)
+//     .then(data => data.json())
+//     .then((json) => {
+//         if (json?.token) {
+//             renderWidget();
+//         }
+//     })
+// })();
+
+renderWidget()
+
+function renderWidget() {
     return document.write(
         `<div id="interactive-interface"> 
             <div id="trigger" onclick="initiateInterface()">
@@ -16,7 +28,7 @@ const bottomText = `
             </div>
         </div>`
     )
-})();
+};
 
 function initiateInterface() {
     active = true;
