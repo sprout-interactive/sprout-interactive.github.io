@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+/* bolier plate code */
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.733vw;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0c0f12;
+    font-weight: 600;
+    color: #e40000 !important;
+}
+
+video {
+    border-radius: 10px;
+}
+
+.video > * {
+    background-color: transparent;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+/* safari end  */
+
+/* Boiler plate code end */
+
+/* main object code begins */
+
+#trigger {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-interactive-interface {
+    position: absolute;
+    left: 5px;
+    height: 40px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 695px;
+    width: 390px;
+}
+
+.frame {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.video-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 390px;
+    height: 695px;
+}
+
+.videos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+ 
+.video {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+/* the section contains the code for video header */
+.header_section {
+    position: relative;
+    width: 100%;
+    padding: 25px 20px;
+    display: flex;
+    z-index: 2;
+    justify-content: space-between;
+}
+
+.header_section img {
+    opacity: 1;
+    height: 30px;
+    margin-bottom: 12px;
+}
+
+.icons-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.countdown {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 5px;
+    background-color: #ff0066;
+}
+/* video Header Section Ends Here */
+
+/* options styling and placement  */
+.options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.currentOptions {
+    text-align: center;
+    color: white;
+}
+
+.question{
+    padding: 10px;
+    max-height: fit-content;
+    font-size: 30px;
+    overflow: auto;
+}
+
+/* h tags sizes to be defined here */
+.question h3{
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 20px black;
+    font-weight: 600;
+}
+.question h4{
+    font-size: 16px;
+    line-height: 25px;
+    text-shadow: 2px 2px 20px black;
+}
+/* h tags definination ends here */
+
+.answers {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 12px;
+    justify-content: center;
+}
+.options button {
+    font-size: 16px;
+    padding: 10px 0;
+    line-height: unset;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+    border: none;
+    color: #0c0f12;
+    text-align: center;
+    cursor: pointer;
+    flex: 0 0 calc(50% - 2.133vw);
+    box-shadow: -1.067vw 4.8vw 7.467vw rgb(41 44 79 / 20%);
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options .cta button {
+    background-color: #00ccff;
+}
+.bottom-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 8px;
+    padding: 20px 0;
+}
+.answers .bottom-text span {
+    padding: 5px;
+    font-style: italic;
+    color: #2e476e;
+    border-radius: 5px;
+}
+
+/* form styling start */
+
+.form{
+    background: #f6f6f6;
+}
+.form-content button{
+    display: flex;
+    width: 90%;
+    height: 40px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color:#0049b7;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 20px;
+    list-style: none;
+    outline: none;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.form-text{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 20px;
+  background-image: url("./assets/test_background.jpg");
+  background-size: 100%;
+    height: 240px;
+    margin-bottom: 20px
+}
+.form-client-logo{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+  margin-left: 20px;
+  font-size: 24px;
+}
+.form-client-logo img{
+  width: 90%;
+}
+.fields{
+    padding: 40px 20px;
+}
+.form-group{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label{
+  margin-bottom: 12px;
+  color: #575757;
+  font-size: 15px;
+}
+.form-group input{
+  height: 50px;
+  border-radius: 12px;
+  border-color: #e9e9e9;
+  border-style: groove;
+  border-width: thin;
+  padding: 12px;
+  font-size: 16px;
+}
+.form-group input:focus {
+  background-color:#f2f6fb;
+  outline-color: #0049b7;
+}
+#formDiv {
+  display: none;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 695px;
+  overflow-y: scroll;
+}
+/* form styling end */
+
+
+/* Media quires for mobile are in this section */
+@media (max-width: 640px) {
+    .container {
+      width: 100%;
+      height: 100%;
+      right: 0px;
+      bottom: 0px;
+    }
+    .video-container {
+      width: 100%;
+      height: 100vh;
+    }
+    .frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #020102;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #020102;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .video-container .video .countdown {
+      width: 100%;
+      left: 0;
+      margin: 0;
+    }
+    .video video {
+        border-radius: 0;
+        object-fit: cover;
+        height: 100%;
+    }
+    .form .form-content {
+        border: 0;
+        max-height: 100%;
+        overflow-y: scroll;
+    }
+    .video-container .options .answers {
+        margin-top: 12px;
+    }
+    #formDiv {
+        height: 100%;
+    }
+}
+/* media quries for mobile end here  */
+
+/* media quries for tablets are in this section */
+@media (min-width: 641px) and (max-width: 1007px) {
+    .container {
+        height: 800px;
+        width: 420px;
+    }
+    /* this section manages frame sizes and styling for tablets */
+    .frame {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 100%;
+    }
+    /*frame sizes and styling ends here */
+  
+    /* this section is to manage the styling of tablet text content */
+    .video-container {
+      width: 100%;
+      height: 100%;
+    }
+    .frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    .video-container .video .countdown{
+      width: 100%;
+      left: 0;
+      margin: 0;
+    }
+    .countdown {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        height: 5px;
+        background-color: #ff0066;
+    }
+    .video-container .video video {
+      object-fit: cover;
+      height: 100%;
+    }
+    
+    .video-container .options .answers {
+      margin-top: 12px;
+    }
+    .form .form-content {
+        border: 0;
+        max-height: 100%;
+        overflow-y: scroll;
+    }
+    #formDiv {
+      display: none;
+      height: 100%;
+    }
+  }
+  /* media quries for tablets end here */
+  
