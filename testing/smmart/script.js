@@ -148,9 +148,7 @@ let dataset = {
     },
     "won": {
         "video": "https://vz-09c53bdb-c9e.b-cdn.net/95f2ef98-4805-4a69-81d0-df1b4d7e1336/playlist.m3u8",
-        "message": "Winning message",
-        "option": "Provide details",
-        "link": "https://www.jugnuplaygames.com/contact-8"
+        "message": "Winning message"
     },
     "time": {
         "video": "https://vz-09c53bdb-c9e.b-cdn.net/fc3fc38f-3aa4-4c2a-87b3-e3e053c62c6b/playlist.m3u8",
@@ -179,20 +177,12 @@ let dataset = {
                 "identifier": "phone",
                 "label": "Phone number"
             }
-        ],
-        "prize": [
-            {
-                "type": "string",
-                "identifier": "address",
-                "label": "Address"
-            }
         ]
     }
 };
 let interval;
 let mute = 'muted';
 let active = false;
-let prize = false;
 let dataObj = { date: new Date().toISOString() };
 
 const bottomText = `
@@ -324,55 +314,37 @@ function shareLink() {
 }
 
 function showForm() {
+    const player = videojs(getVideoId());
+    player.pause();
     document.getElementById('frameDiv').style.display = 'none';
     let fieldsDiv = '';
-    if (prize) {
-        dataset.form.prize.forEach(element => {
-            fieldsDiv += `<div class="form-group">
-                <label for="${element.identifier}">${element.label}:</label>
-                <input type="${element.type}" class="field" id="${element.identifier}" name="${element.identifier}">
-            </div>`
-        })
-    }
-    else {
-        dataset.form.lead.forEach(element => {
-            fieldsDiv += `<div class="form-group">
-                <label for="${element.identifier}">${element.label}:</label>
-                <input type="${element.type}" class="field" id="${element.identifier}" name="${element.identifier}">
-            </div>`
-        })
-    }
+    dataset.form.lead.forEach(element => {
+        fieldsDiv += `<div class="form-group">
+            <label for="${element.identifier}">${element.label}:</label>
+            <input type="${element.type}" class="field" id="${element.identifier}" name="${element.identifier}">
+        </div>`
+    })
     document.getElementById('fieldsDiv').innerHTML = fieldsDiv;
     document.getElementById('formDiv').style.display = 'block';
 }
 
 function closeForm() {
+    const player = videojs(getVideoId());
+    player.play();
     document.getElementById('formDiv').style.display = 'none';
     document.getElementById('frameDiv').style.display = 'block';
 }
 
 function sendInfo() {
     let dataErr = null;
-    if (prize) {
-        dataset.form.prize.forEach(element => {
-            if (document.getElementById(element.identifier).value.trim() !== "") {
-                dataObj[element.identifier] = document.getElementById(element.identifier).value;
-            }
-            else {
-                dataErr = true;
-            }
-        })
-    }
-    else {
-        dataset.form.lead.forEach(element => {
-            if (document.getElementById(element.identifier).value.trim() !== "") {
-                dataObj[element.identifier] = document.getElementById(element.identifier).value;
-            }
-            else {
-                dataErr = true;
-            }
-        })
-    }
+    dataset.form.lead.forEach(element => {
+        if (document.getElementById(element.identifier).value.trim() !== "") {
+            dataObj[element.identifier] = document.getElementById(element.identifier).value;
+        }
+        else {
+            dataErr = true;
+        }
+    })
     if (dataErr === null) {
         fetch('https://k90nmo1jz3.execute-api.ap-south-1.amazonaws.com/v1/collect-lead/', {
             method: 'post',
@@ -385,10 +357,8 @@ function sendInfo() {
         }).then((res) => {
             if (res.status === 200) {
                 closeForm();
-                if (!prize) {
-                    localStorage.setItem("lead", true);
-                    nextVideo('1');
-                }
+                localStorage.setItem("lead", true);
+                nextVideo('1');
             }
         }).catch((error) => {
             closeInterface();
@@ -415,9 +385,6 @@ function nextVideo(selection) {
        options.parentNode.removeChild(options);
     }
     if (selection === "won" || selection === "time" || selection === "wrong") {
-        if (selection === "won") {
-            prize = true;
-        }
         document.getElementById('videosDiv').innerHTML += `<div class="video">
             <video id="quiz-${selection}" class="video-js vjs-fill" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
                 <source src="${dataset[selection].video}" type="application/x-mpegURL">
@@ -451,7 +418,7 @@ function nextQuestion(question, selection, randomQuestionNo) {
     let selectionOptions = '';
     let questions = dataset[selection].questions;
     let options = questions[randomQuestionNo].options;
-    options = shuffleOptions(options);
+    // options = shuffleOptions(options);
     options.forEach((o) => {
         let stage = parseInt(selection, 10);
         stage = (stage + 1).toString();
