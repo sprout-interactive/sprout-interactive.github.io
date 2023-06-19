@@ -144,19 +144,20 @@ let dataset = {
         ]
     },
     "right": {
-        "video": "https://vz-09c53bdb-c9e.b-cdn.net/6c186e8e-03d9-4e30-9822-50a63c7d50e1/playlist.m3u8"
+        "video": "https://vz-da0317b0-84a.b-cdn.net/e1c7e399-2eea-4581-a434-01ebecfdd3a4/playlist.m3u8?v=1687209783"
     },
     "won": {
-        "video": "https://vz-09c53bdb-c9e.b-cdn.net/95f2ef98-4805-4a69-81d0-df1b4d7e1336/playlist.m3u8",
-        "message": "Winning message"
+        "video": "https://vz-da0317b0-84a.b-cdn.net/00454662-d0d8-455e-997e-b6118b291825/playlist.m3u8?v=1687209866",
+        "message": "You Won! You Can Still Play Again To Test Knowlage",
+        "option": "Play Again"
     },
     "time": {
-        "video": "https://vz-09c53bdb-c9e.b-cdn.net/fc3fc38f-3aa4-4c2a-87b3-e3e053c62c6b/playlist.m3u8",
+        "video": "https://vz-da0317b0-84a.b-cdn.net/f3e05646-48f2-4649-9b52-5ed0ae0b6425/playlist.m3u8?v=1687209933",
         "message": "Click On The Button Below To Try Again",
         "option": "Play Again"
     },
     "wrong": {
-        "video": "https://vz-09c53bdb-c9e.b-cdn.net/0c3e4889-971a-41e4-a658-ab88d7e0eec7/playlist.m3u8",
+        "video": "https://vz-da0317b0-84a.b-cdn.net/8c35a1a9-99a1-4a27-8a23-ec7e9f9bb6c8/playlist.m3u8?v=1687209899",
         "message": "Sorry you did not clear stage 1",
         "option": "Try again"
     },
@@ -206,7 +207,7 @@ function renderWidget() {
     return document.write(
         `<div id="interactive-interface"> 
             <div id="trigger" onclick="initiateInterface()">
-                <img src="./assets/logo-dark.svg" style="height: 40px; width: 60px;">
+                <img src="./assets/Smmart-Avtar.svg">
             </div>
         </div>`
     )
@@ -225,7 +226,7 @@ function initiateInterface() {
                     </div>
                 </div>
                 <div class="header_section">
-                     <img id="logo" src="./assets/logo-dark.svg">
+                     <img id="logo" src="./assets/smart-logo.png">
                     <div class="icons-wrapper">
                         <img src="./assets/close.svg" onclick="closeInterface()">
                         <img id="speaker" src="./assets/mute.svg" onclick="toggleSound()">
@@ -249,10 +250,10 @@ function initiateInterface() {
             <div class="form-content">
                 <div class="textOnForm">
                     <div class="form-text">
-                        <img src="./assets/close.svg" onclick="closeForm()">
+                        <img src="./assets/close.png" onclick="closeForm()">
                     </div>
                     <div class="form-client-logo">
-                        <h4>Get In Touch</h4>
+                        <h4>Get In Touch 👋</h4>
                     </div>
                 </div>
                 <div class="fields" id="fieldsDiv">
@@ -273,7 +274,7 @@ function closeInterface() {
     videojs(getVideoId()).dispose();
     active = false;
     document.getElementById("interactive-interface").innerHTML = `<div id="trigger" onclick="initiateInterface()">
-        <img src="./assets/logo-dark.svg" style="height: 40px; width: 60px;">
+        <img src="./assets/Smmart-Avtar.svg">
     </div>`
 }
 
