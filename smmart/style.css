@@ -79,25 +79,22 @@ video {
   /* width: 60px; */
   cursor: pointer;
   border-radius: 5px;
-  animation: wobbleEffect 1.5s infinite;
+  animation: growShrink 3s infinite alternate ease-in-out;
 }
 
 #trigger img{
 height: 260px;
 }
 
-@keyframes wobbleEffect {
+@keyframes growShrink {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
-  25% {
-    transform: rotate(-1deg);
-  }
-  75% {
-    transform: rotate(1deg);
+  50% {
+    transform: scale(1.1); /* Adjust the scale value as desired */
   }
   100% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
 }
 
