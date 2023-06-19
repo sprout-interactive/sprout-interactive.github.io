@@ -250,6 +250,7 @@ height: 260px;
     /* background-color: #00ccff; */
     background-color: #760102;
     color: #FFFFFF;
+    animation: growShrink 1s infinite alternate ease-in-out;
 }
 .bottom-text {
     display: flex;
