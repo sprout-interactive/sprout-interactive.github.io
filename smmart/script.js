@@ -144,21 +144,21 @@ let dataset = {
         ]
     },
     "right": {
-        "video": "https://vz-da0317b0-84a.b-cdn.net/e1c7e399-2eea-4581-a434-01ebecfdd3a4/playlist.m3u8?v=1687209783"
+        "video": "https://vz-da0317b0-84a.b-cdn.net/e1c7e399-2eea-4581-a434-01ebecfdd3a4/playlist.m3u8"
     },
     "won": {
         "video": "https://vz-da0317b0-84a.b-cdn.net/f981e987-fa0a-42c4-88b0-0ca70adfbc48/playlist.m3u8",
-        "message": "You Won! You Can Still Play Again To Test Knowlage",
+        "message": "You Won! You can still play again to test your knowledge",
         "option": "Play Again"
     },
     "time": {
-        "video": "https://vz-da0317b0-84a.b-cdn.net/f3e05646-48f2-4649-9b52-5ed0ae0b6425/playlist.m3u8?v=1687209933",
-        "message": "Click On The Button Below To Try Again",
+        "video": "https://vz-da0317b0-84a.b-cdn.net/f3e05646-48f2-4649-9b52-5ed0ae0b6425/playlist.m3u8",
+        "message": "Click on the button below to try again",
         "option": "Play Again"
     },
     "wrong": {
-        "video": "https://vz-da0317b0-84a.b-cdn.net/8c35a1a9-99a1-4a27-8a23-ec7e9f9bb6c8/playlist.m3u8?v=1687209899",
-        "message": "Sorry you did not clear stage 1",
+        "video": "https://vz-da0317b0-84a.b-cdn.net/8c35a1a9-99a1-4a27-8a23-ec7e9f9bb6c8/playlist.m3u8",
+        "message": "Sorry you selected a wrong option",
         "option": "Try again"
     },
     "form": {
@@ -166,17 +166,32 @@ let dataset = {
             {
                 "type": "string",
                 "identifier": "name",
-                "label": "Full name"
+                "label": "Name"
+            },
+            {
+                "type": "string",
+                "identifier": "companyName",
+                "label": "Company Name"
+            },
+            {
+                "type": "string",
+                "identifier": "contactNumber",
+                "label": "Contact Number"
             },
             {
                 "type": "email",
-                "identifier": "emailid",
+                "identifier": "email",
                 "label": "Email Address"
             },
             {
-                "type": "number",
-                "identifier": "phone",
-                "label": "Phone number"
+                "type": "string",
+                "identifier": "turnOver",
+                "label": "Turn Over"
+            },
+            {
+                "type": "string",
+                "identifier": "location",
+                "label": "Location"
             }
         ]
     }
@@ -191,21 +206,15 @@ const bottomText = `
         <span>Powered By Sprout</span>
     </div>`;
 
-// (function() {
-//     fetch(`https://ourauthbackend.com/widget?url=${window.location.href}`)
-//     .then(data => data.json())
-//     .then((json) => {
-//         if (json?.token) {
-//             renderWidget();
-//         }
-//     })
-// })();
-
 renderWidget()
+
+function getParent() {
+    return document.getElementById('mysproutcloud-interactive-interface');
+}
 
 function renderWidget() {
     return document.write(
-        `<div id="interactive-interface"> 
+        `<div id="mysproutcloud-interactive-interface"> 
             <div id="trigger" onclick="initiateInterface()">
                 <img src="./assets/Smmart-Avtar.svg">
             </div>
@@ -215,7 +224,7 @@ function renderWidget() {
 
 function initiateInterface() {
     active = true;
-    document.getElementById("interactive-interface").innerHTML = `<div class="container">
+    getParent().innerHTML = `<div class="container">
         <div class="frame" id="frameDiv">
             <div class="video-container">
                 <div class="videos" id="videosDiv">
@@ -239,7 +248,7 @@ function initiateInterface() {
                             <h4>Play to win. Click below to get started</h4>
                         </div>
                         <div class="answers cta">
-                            <button type="button" value="1" onclick=${localStorage.getItem("lead") ? "nextVideo('1')" : "showForm()"}>Get Started</button>
+                            <button type="button" value="1" onclick=${localStorage.getItem("lead") ? "nextVideo('1',true)" : "showForm()"}>Get Started</button>
                             ${bottomText}
                         </div>
                     </div>
@@ -273,13 +282,13 @@ function closeInterface() {
     stopTimer();
     videojs(getVideoId()).dispose();
     active = false;
-    document.getElementById("interactive-interface").innerHTML = `<div id="trigger" onclick="initiateInterface()">
+    getParent().innerHTML = `<div id="trigger" onclick="initiateInterface()">
         <img src="./assets/Smmart-Avtar.svg">
     </div>`
 }
 
 function getVideoId() {
-    let video = document.getElementsByClassName('video')
+    let video = getParent().getElementsByClassName('video')
     video = Array.from(video);
     video = Array.from(video[0].children);
     if (video.length > 1) {
@@ -292,7 +301,7 @@ function toggleSound() {
     let video = videojs(getVideoId()).player();
     video.muted(!video.muted());
     mute = video.muted() ? 'muted' : null;
-    let icon = document.getElementById('speaker');
+    let icon = getParent().querySelector('#speaker');
     if (video.muted()) {
        icon.src = './assets/mute.svg';
     }
@@ -317,7 +326,7 @@ function shareLink() {
 function showForm() {
     const player = videojs(getVideoId());
     player.pause();
-    document.getElementById('frameDiv').style.display = 'none';
+    getParent().querySelector('#frameDiv').style.display = 'none';
     let fieldsDiv = '';
     dataset.form.lead.forEach(element => {
         fieldsDiv += `<div class="form-group">
@@ -325,41 +334,47 @@ function showForm() {
             <input type="${element.type}" class="field" id="${element.identifier}" name="${element.identifier}">
         </div>`
     })
-    document.getElementById('fieldsDiv').innerHTML = fieldsDiv;
-    document.getElementById('formDiv').style.display = 'block';
+    getParent().querySelector('#fieldsDiv').innerHTML = fieldsDiv;
+    getParent().querySelector('#formDiv').style.display = 'block';
 }
 
 function closeForm() {
     const player = videojs(getVideoId());
     player.play();
-    document.getElementById('formDiv').style.display = 'none';
-    document.getElementById('frameDiv').style.display = 'block';
+    getParent().querySelector('#formDiv').style.display = 'none';
+    getParent().querySelector('#frameDiv').style.display = 'block';
 }
 
 function sendInfo() {
-    let dataErr = null;
+    let dataErr = [];
     dataset.form.lead.forEach(element => {
-        if (document.getElementById(element.identifier).value.trim() !== "") {
-            dataObj[element.identifier] = document.getElementById(element.identifier).value;
-        }
-        else {
-            dataErr = true;
-        }
-    })
-    if (dataErr === null) {
-        fetch('https://k90nmo1jz3.execute-api.ap-south-1.amazonaws.com/v1/collect-lead/', {
+        dataObj[element.identifier] = getParent().querySelector(`#${element.identifier}`).value;
+    });
+    if (dataObj.name === "") {
+        dataErr.push("name");
+    } 
+    if (dataObj.companyName === "") {
+        dataErr.push("companyName")
+    } 
+    if (dataObj.contactNumber === "" || !/^[6-9]\d{9}$/.test(dataObj.contactNumber)) {
+        dataErr.push("contactNumber")
+    }
+    if (dataErr.length === 0) {
+        fetch('https://ei7nd0lrp7.execute-api.ap-south-1.amazonaws.com/v1/lead', {
             method: 'post',
             body: JSON.stringify(dataObj),
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then((response) => {
-            return response.json()
         }).then((res) => {
             if (res.status === 200) {
                 closeForm();
                 localStorage.setItem("lead", true);
-                nextVideo('1');
+                nextVideo('1', true);
+            }
+            else {
+                closeInterface();
+                console.log(error);    
             }
         }).catch((error) => {
             closeInterface();
@@ -367,50 +382,64 @@ function sendInfo() {
         })
     }
     else {
-        closeForm();
-        nextVideo('1');
-        console.log("no data");
+        dataErr.forEach((field) => {
+            getParent().querySelector(`#${field}`).style.borderColor = "red";
+            setTimeout(() => {
+                getParent().querySelector(`#${field}`).style.borderColor = "";
+            }, 2000);
+        });
     }
 }
 
-function nextVideo(selection) {
+function nextVideo(selection, moderator) {
     stopTimer()
     videojs(getVideoId()).dispose();
-    document.getElementById('videosDiv').innerHTML = '';
-    let text = document.getElementById('textOnVideoDiv');
+    getParent().querySelector('#videosDiv').innerHTML = '';
+    let text = getParent().querySelector('#textOnVideoDiv');
     if (text !== null) {
        text.parentNode.removeChild(text);
     }
-    let options = document.getElementById('currentOptionsDiv');
+    let options = getParent().querySelector('#currentOptionsDiv');
     if (options) {
        options.parentNode.removeChild(options);
     }
     if (selection === "won" || selection === "time" || selection === "wrong") {
-        document.getElementById('videosDiv').innerHTML += `<div class="video">
+        getParent().querySelector('#videosDiv').innerHTML += `<div class="video">
             <video id="quiz-${selection}" class="video-js vjs-fill" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
                 <source src="${dataset[selection].video}" type="application/x-mpegURL">
             </video>
         </div>`;
-        document.getElementById('optionsDiv').innerHTML += `<div class="currentOptions" id="currentOptionsDiv">
+        getParent().querySelector('#optionsDiv').innerHTML += `<div class="currentOptions" id="currentOptionsDiv">
             <div class="question">
                 <h4>${dataset[selection].message}</h4>
             </div>
             <div class="answers cta">
-                <button type="button" onclick=${dataset[selection].link ? "showForm()" : "nextVideo('1')"}>${dataset[selection].option}</button>
+                ${selection === "won" ? `<button type="button" onclick='openLink()'>Prize</button>` : ""}
+                <button type="button" onclick=${dataset[selection].link ? "showForm()" : "nextVideo('1',false)"}>${dataset[selection].option}</button>
                 ${bottomText}
             </div>`;
-        document.getElementById('optionsDiv').style.display = 'flex';
+        getParent().querySelector('#optionsDiv').style.display = 'flex';
     }
     else if (parseInt(selection) > 0) {
-        let questions = dataset[selection].questions;
-        let randomQuestionNo = Math.floor(Math.random() * questions.length);
-        let question = questions[randomQuestionNo].question;
-        document.getElementById('videosDiv').innerHTML += `<div class="video">
-            <div class="countdown"></div>
-            <video id="quiz-${selection}" onended="nextQuestion(\`${question}\`, '${selection}', '${randomQuestionNo}')" class="video-js vjs-fill" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
-                <source src="${dataset[selection].questions[randomQuestionNo].video}" type="application/x-mpegURL">
-            </video>
-        </div>`;
+        if (parseInt(selection) > 1 && moderator) {
+            getParent().querySelector('#videosDiv').innerHTML += `<div class="video">
+                <video id="quiz-right" onended="nextVideo('${selection}', false)" class="video-js vjs-fill" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
+                    <source src="${dataset["right"]["video"]}" type="application/x-mpegURL">
+                </video>
+            </div>`;
+            selection = 'right';
+        }
+        else {
+            let questions = dataset[selection].questions;
+            let randomQuestionNo = Math.floor(Math.random() * questions.length);
+            let question = questions[randomQuestionNo].question;
+            getParent().querySelector('#videosDiv').innerHTML += `<div class="video">
+                <div class="countdown"></div>
+                <video id="quiz-${selection}" onended="nextQuestion(\`${question}\`, '${selection}', '${randomQuestionNo}')" class="video-js vjs-fill" controls="false" autoplay="true" playsinline data-setup='{"customControlsOnMobile": true}' ${mute}>
+                    <source src="${dataset[selection].questions[randomQuestionNo].video}" type="application/x-mpegURL">
+                </video>
+            </div>`;
+        }
     }
     videojs(`quiz-${selection}`).ready(function() { this.player_.controls(false) });
 }
@@ -424,16 +453,16 @@ function nextQuestion(question, selection, randomQuestionNo) {
         let stage = parseInt(selection, 10);
         stage = (stage + 1).toString();
         if (dataset[stage] && o === questions[randomQuestionNo].correct){
-            selectionOptions += `<button type="button" value="${o}" onclick="nextVideo('${stage}')">${o}</button>`
+            selectionOptions += `<button type="button" value="${o}" onclick="nextVideo('${stage}', true)">${o}</button>`
         }
         else if (!dataset[stage]) {
-            selectionOptions += `<button type="button" value="${o}" onclick="nextVideo('won')">${o}</button>`
+            selectionOptions += `<button type="button" value="${o}" onclick="nextVideo('won', false)">${o}</button>`
         }
         else {
-            selectionOptions += `<button type="button" value="${o}" onclick="nextVideo('wrong')">${o}</button>`
+            selectionOptions += `<button type="button" value="${o}" onclick="nextVideo('wrong', false)">${o}</button>`
         }
     })
-    document.getElementById('optionsDiv').innerHTML += `<div class="currentOptions" id="currentOptionsDiv">
+    getParent().querySelector('#optionsDiv').innerHTML += `<div class="currentOptions" id="currentOptionsDiv">
         <div class="question">
           <h4>${question}</h4>
         </div>
@@ -441,14 +470,8 @@ function nextQuestion(question, selection, randomQuestionNo) {
           ${selectionOptions}
           ${bottomText}
         </div>`;
-    document.getElementById('optionsDiv').style.display = 'flex';
+    getParent().querySelector('#optionsDiv').style.display = 'flex';
     startTimer();
-}
-
-function toTitleCase(str) {
-    return str.replace(/wS*/g, function (txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
 }
 
 function startTimer() {
@@ -456,11 +479,11 @@ function startTimer() {
     interval = setInterval(() => {
         if (count == 0) {
             stopTimer();
-            nextVideo('time');
+            nextVideo('time', false);
         }
         else {
             count--;
-            document.getElementsByClassName('countdown')[0].style.width = count + '%';
+            getParent().getElementsByClassName('countdown')[0].style.width = count + '%';
         }
     }, 100);
 }
@@ -477,6 +500,6 @@ function stopTimer() {
     clearInterval(interval);
 }
 
-function openInNewTab(url) {
-    window.open(url, '_blank').focus();
+function openLink() {
+    window.open("https://youtu.be/j0V9JkkpH-8", '_blank').focus();
 }

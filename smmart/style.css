@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
-
-/* bolier plate code */
-* {
+/* boiler plate code */
+#mysproutcloud-interactive-interface * {
   box-sizing: border-box;
 }
 
-body {
+#mysproutcloud-interactive-interface body {
     margin: auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 3.733vw;
@@ -14,22 +11,23 @@ body {
     line-height: 1.2;
 }
 
-h1,h2,h3,h4,h5,h6 {
+#mysproutcloud-interactive-interface h1, #mysproutcloud-interactive-interface h2, #mysproutcloud-interactive-interface h3, #mysproutcloud-interactive-interface h4, #mysproutcloud-interactive-interface h5, #mysproutcloud-interactive-interface h6 {
     margin: 0;
+    font-family: sans-serif;
 }
 
-a {
+#mysproutcloud-interactive-interface a {
     text-decoration: none;
     color: #0c0f12;
     font-weight: 600;
     color: #e40000 !important;
 }
 
-video {
+#mysproutcloud-interactive-interface video {
     border-radius: 10px;
 }
 
-.video > * {
+#mysproutcloud-interactive-interface .video > * {
     background-color: transparent;
 }
 
@@ -56,49 +54,34 @@ video {
 
 /* main object code begins */
 
-/* #trigger {
+#mysproutcloud-interactive-interface #trigger {
     display: flex;
     align-items: center;
     position: absolute;
-    right: 15px;
-    bottom: 5px;
-    height: 60px;
-    width: 60px;
+    right: 20px;
+    bottom: 20px;
     cursor: pointer;
     border-radius: 5px;
-} */
-
-
-#trigger {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: 15px;
-  bottom: 5px;
-  /* height: 60px; */
-  /* width: 60px; */
-  cursor: pointer;
-  border-radius: 5px;
-  animation: growShrink 3s infinite alternate ease-in-out;
+    animation: growShrink 3s infinite alternate ease-in-out;
 }
 
-#trigger img{
-height: 260px;
+#mysproutcloud-interactive-interface #trigger img{
+    height: 260px;
 }
 
 @keyframes growShrink {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1); /* Adjust the scale value as desired */
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Adjust the scale value as desired */
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-.close-interactive-interface {
+#mysproutcloud-interactive-interface .close-interactive-interface {
     position: absolute;
     left: 5px;
     height: 40px;
@@ -107,7 +90,7 @@ height: 260px;
     align-items: center;
 }
 
-.container {
+#mysproutcloud-interactive-interface .container {
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -115,7 +98,7 @@ height: 260px;
     width: 390px;
 }
 
-.frame {
+#mysproutcloud-interactive-interface .frame {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -124,7 +107,7 @@ height: 260px;
     margin: 0 auto;
 }
 
-.video-container {
+#mysproutcloud-interactive-interface .video-container {
     position: relative;
     top: 0;
     left: 0;
@@ -132,7 +115,7 @@ height: 260px;
     height: 695px;
 }
 
-.videos {
+#mysproutcloud-interactive-interface .videos {
     position: absolute;
     top: 0;
     left: 0;
@@ -140,8 +123,8 @@ height: 260px;
     height: 100%;
     z-index: 0;
 }
- 
-.video {
+
+#mysproutcloud-interactive-interface .video {
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -149,7 +132,7 @@ height: 260px;
 
 
 /* the section contains the code for video header */
-.header_section {
+#mysproutcloud-interactive-interface .header_section {
     position: relative;
     width: 100%;
     padding: 25px 20px;
@@ -158,20 +141,20 @@ height: 260px;
     justify-content: space-between;
 }
 
-.header_section img {
+#mysproutcloud-interactive-interface .header_section img {
     opacity: 1;
     height: 30px;
     margin-bottom: 12px;
 }
 
-.icons-wrapper{
+#mysproutcloud-interactive-interface .icons-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 30%;
 }
 
-.countdown {
+#mysproutcloud-interactive-interface .countdown {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -181,7 +164,7 @@ height: 260px;
 /* video Header Section Ends Here */
 
 /* options styling and placement  */
-.options {
+#mysproutcloud-interactive-interface .options {
     position: absolute;
     top: 0;
     left: 0;
@@ -194,12 +177,13 @@ height: 260px;
     justify-content: flex-end;
 }
 
-.currentOptions {
+#mysproutcloud-interactive-interface .currentOptions {
     text-align: center;
     color: white;
+    width: 95%;
 }
 
-.question{
+#mysproutcloud-interactive-interface .question{
     padding: 10px;
     max-height: fit-content;
     font-size: 30px;
@@ -207,21 +191,22 @@ height: 260px;
 }
 
 /* h tags sizes to be defined here */
-.question h3{
+#mysproutcloud-interactive-interface .question h3{
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 10px;
     text-shadow: 2px 2px 20px black;
     font-weight: 600;
 }
-.question h4{
+
+#mysproutcloud-interactive-interface .question h4{
     font-size: 16px;
     line-height: 25px;
     text-shadow: 2px 2px 20px black;
 }
 /* h tags definination ends here */
 
-.answers {
+#mysproutcloud-interactive-interface .answers {
     padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
@@ -229,7 +214,8 @@ height: 260px;
     margin-top: 12px;
     justify-content: center;
 }
-.options button {
+
+#mysproutcloud-interactive-interface .options button {
     font-size: 16px;
     padding: 10px 0;
     line-height: unset;
@@ -246,20 +232,22 @@ height: 260px;
     justify-content: center;
     align-items: center;
 }
-.options .cta button {
-    /* background-color: #00ccff; */
+
+#mysproutcloud-interactive-interface .options .cta button {
     background-color: #760102;
     color: #FFFFFF;
     animation: growShrink 1s infinite alternate ease-in-out;
 }
-.bottom-text {
+
+#mysproutcloud-interactive-interface .bottom-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 8px;
     padding: 20px 0;
 }
-.answers .bottom-text span {
+
+#mysproutcloud-interactive-interface .answers .bottom-text span {
     padding: 5px;
     font-style: italic;
     color: #2e476e;
@@ -268,10 +256,11 @@ height: 260px;
 
 /* form styling start */
 
-.form{
+#mysproutcloud-interactive-interface .form{
     background: #f6f6f6;
 }
-.form-content button{
+
+#mysproutcloud-interactive-interface .form-content button{
     display: flex;
     width: 90%;
     height: 40px;
@@ -298,40 +287,42 @@ height: 260px;
     -webkit-user-select: none;
     touch-action: manipulation;
 }
-.form-text{
+
+#mysproutcloud-interactive-interface .form-text{
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
   padding: 20px;
-  /* background-image: url("./assets/test_background.jpg"); */
-  /* background-size: 100%;
-    height: 240px;
-    margin-bottom: 20px */
 }
-.form-client-logo{
+
+#mysproutcloud-interactive-interface .form-client-logo{
   display: flex;
   justify-content: flex-start;
-  /* margin-bottom: 24px; */
   margin-left: 20px;
   font-size: 24px;
 }
-.form-client-logo img{
+
+#mysproutcloud-interactive-interface .form-client-logo img{
   width: 90%;
 }
-.fields{
+
+#mysproutcloud-interactive-interface .fields{
     padding: 20px 20px;
 }
-.form-group{
+
+#mysproutcloud-interactive-interface .form-group{
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
-.form-group label{
+
+#mysproutcloud-interactive-interface .form-group label{
   margin-bottom: 12px;
   color: #575757;
   font-size: 15px;
 }
-.form-group input{
+
+#mysproutcloud-interactive-interface .form-group input{
   height: 50px;
   border-radius: 12px;
   border-color: #e9e9e9;
@@ -340,11 +331,13 @@ height: 260px;
   padding: 12px;
   font-size: 16px;
 }
-.form-group input:focus {
+
+#mysproutcloud-interactive-interface .form-group input:focus {
   background-color:#f2f6fb;
   outline-color: #0049b7;
 }
-#formDiv {
+
+#mysproutcloud-interactive-interface #formDiv {
   display: none;
   position: absolute;
   top: 0px;
@@ -357,24 +350,24 @@ height: 260px;
 
 /* Media quires for mobile are in this section */
 @media (max-width: 640px) {
-    .container {
-      width: 100%;
-      height: 100%;
-      right: 0px;
-      bottom: 0px;
+    #mysproutcloud-interactive-interface .container {
+        width: 100%;
+        height: 100%;
+        right: 0px;
+        bottom: 0px;
     }
-    .video-container {
-      width: 100%;
-      height: 100%;
+    #mysproutcloud-interactive-interface .video-container {
+        width: 100%;
+        height: 100%;
     }
-    .frame {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #020102;
-      margin: 0 auto;
+    #mysproutcloud-interactive-interface .frame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #020102;
+        margin: 0 auto;
     }
-    .video {
+    #mysproutcloud-interactive-interface .video {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -382,25 +375,25 @@ height: 260px;
         height: 100%;
         margin: 0 auto;
     }
-    .video-container .video .countdown {
-      width: 100%;
-      left: 0;
-      margin: 0;
+    #mysproutcloud-interactive-interface .video-container .video .countdown {
+        width: 100%;
+        left: 0;
+        margin: 0;
     }
-    .video video {
+    #mysproutcloud-interactive-interface .video video {
         border-radius: 0;
         object-fit: cover;
         height: 100%;
     }
-    .form .form-content {
+    #mysproutcloud-interactive-interface .form .form-content {
         border: 0;
         max-height: 100%;
         overflow-y: scroll;
     }
-    .video-container .options .answers {
+    #mysproutcloud-interactive-interface .video-container .options .answers {
         margin-top: 12px;
     }
-    #formDiv {
+    #mysproutcloud-interactive-interface #formDiv {
         height: 100%;
     }
 }
@@ -408,69 +401,67 @@ height: 260px;
 
 /* media quries for tablets are in this section */
 @media (min-width: 641px) and (max-width: 1007px) {
-    .container {
+    #mysproutcloud-interactive-interface .container {
         height: 800px;
         width: 420px;
     }
     /* this section manages frame sizes and styling for tablets */
-    .frame {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 100%;
-      height: 100%;
+    #mysproutcloud-interactive-interface .frame {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
     }
     /*frame sizes and styling ends here */
   
     /* this section is to manage the styling of tablet text content */
-    .video-container {
-      width: 100%;
-      height: 100%;
+    #mysproutcloud-interactive-interface .video-container {
+        width: 100%;
+        height: 100%;
     }
-    .frame {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      margin: 0 auto;
-    }
-    .video {
+    #mysproutcloud-interactive-interface .frame {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-      }
-    .video-container .video .countdown{
-      width: 100%;
-      left: 0;
-      margin: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
     }
-    .countdown {
+    #mysproutcloud-interactive-interface .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #mysproutcloud-interactive-interface .video-container .video .countdown{
+        width: 100%;
+        left: 0;
+        margin: 0;
+    }
+    #mysproutcloud-interactive-interface .countdown {
         position: absolute;
         z-index: 1;
         top: 0;
         height: 5px;
         background-color: #ff0066;
     }
-    .video-container .video video {
-      object-fit: cover;
-      height: 100%;
+    #mysproutcloud-interactive-interface .video-container .video video {
+        object-fit: cover;
+        height: 100%;
     }
-    
-    .video-container .options .answers {
-      margin-top: 12px;
+    #mysproutcloud-interactive-interface .video-container .options .answers {
+        margin-top: 12px;
     }
-    .form .form-content {
+    #mysproutcloud-interactive-interface .form .form-content {
         border: 0;
         max-height: 100%;
         overflow-y: scroll;
     }
-    #formDiv {
-      display: none;
-      height: 100%;
+    #mysproutcloud-interactive-interface #formDiv {
+        display: none;
+        height: 100%;
     }
-  }
+}
   /* media quries for tablets end here */
-  
