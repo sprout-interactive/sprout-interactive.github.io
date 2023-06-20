@@ -448,7 +448,7 @@ function nextQuestion(question, selection, randomQuestionNo) {
     let selectionOptions = '';
     let questions = dataset[selection].questions;
     let options = questions[randomQuestionNo].options;
-    // options = shuffleOptions(options);
+    options = shuffleOptions(options);
     options.forEach((o) => {
         let stage = parseInt(selection, 10);
         stage = (stage + 1).toString();

@@ -57,11 +57,12 @@
 #mysproutcloud-interactive-interface #trigger {
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     right: 20px;
     bottom: 20px;
     cursor: pointer;
     border-radius: 5px;
+    z-index: 99;
     animation: growShrink 3s infinite alternate ease-in-out;
 }
 
@@ -82,7 +83,7 @@
 }
 
 #mysproutcloud-interactive-interface .close-interactive-interface {
-    position: absolute;
+    position: fixed;
     left: 5px;
     height: 40px;
     z-index: 3;
@@ -91,7 +92,7 @@
 }
 
 #mysproutcloud-interactive-interface .container {
-    position: absolute;
+    position: fixed;
     right: 10px;
     bottom: 10px;
     height: 695px;
@@ -355,6 +356,8 @@
         height: 100%;
         right: 0px;
         bottom: 0px;
+        position: fixed;
+        z-index: 99;
     }
     #mysproutcloud-interactive-interface .video-container {
         width: 100%;
