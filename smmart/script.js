@@ -1,6 +1,6 @@
-// function gtag(){dataLayer.push(arguments);}
-// gtag('js', new Date());
-// gtag('config', 'G-Q5924RXKC5');
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Q5924RXKC5');
 
 let dataset = {
     "1": {
