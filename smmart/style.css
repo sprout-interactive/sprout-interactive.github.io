@@ -54,7 +54,7 @@
 
 /* main object code begins */
 
-#mysproutcloud-interactive-interface #trigger {
+#mysproutcloud-interactive-interface {
     display: flex;
     align-items: center;
     position: fixed;
@@ -63,6 +63,9 @@
     cursor: pointer;
     border-radius: 5px;
     z-index: 99;
+}
+
+#mysproutcloud-interactive-interface #trigger {
     animation: growShrink 3s infinite alternate ease-in-out;
 }
 
