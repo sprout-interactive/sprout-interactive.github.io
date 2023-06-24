@@ -159,8 +159,9 @@
 #mysproutcloud-interactive-interface .icons-wrapper{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     margin-left: 30%;
+    align-items: flex-end;
 }
 
 #mysproutcloud-interactive-interface .countdown {
@@ -243,8 +244,9 @@
 }
 
 #mysproutcloud-interactive-interface .options .cta button {
-    background-color: #760102;
+    background-color: #F58A3B;
     color: #FFFFFF;
+    font-weight: 700;
     animation: growShrink 1s infinite alternate ease-in-out;
 }
 

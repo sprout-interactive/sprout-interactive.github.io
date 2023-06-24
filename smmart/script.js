@@ -216,7 +216,7 @@ const bottomText = `
     </div>`;
 
 renderWidget();
-autoTrigger = setTimeout(() => { initiateInterface() }, 5000);
+autoTrigger = setTimeout(() => { initiateInterface() }, 4000);
 
 function getParent() {
     return document.getElementById('mysproutcloud-interactive-interface');
@@ -226,7 +226,7 @@ function renderWidget() {
     return document.write(
         `<div id="mysproutcloud-interactive-interface"> 
             <div id="trigger" onclick="initiateInterface()">
-                <img src="./assets/Smmart-Avtar.svg">
+                <img src="https://sm-bus-st.mysprout.cloud/assets/Smmart-Avtar.svg">
             </div>
         </div>`
     )
@@ -247,20 +247,20 @@ function initiateInterface() {
                         </div>
                     </div>
                     <div class="header_section">
-                         <img id="logo" src="./assets/smart-logo.png">
+                         <img id="logo" src="https://sm-bus-st.mysprout.cloud/assets/smart-logo.png">
                         <div class="icons-wrapper">
-                            <img src="./assets/close.svg" onclick="closeInterface()">
-                            <img id="speaker" src="./assets/mute.svg" onclick="toggleSound()">
+                            <img src="https://sm-bus-st.mysprout.cloud/assets/close.svg" onclick="closeInterface()">
+                            <img id="speaker" src="https://sm-bus-st.mysprout.cloud/assets/tap-unmute.svg" onclick="toggleSound()">
                         </div>
                     </div>
                     <div class="options" id="optionsDiv">
                         <div class="currentOptions" id="currentOptionsDiv">
                             <div class="question">
-                                <h3>Welcome to the Quiz</h3>
-                                <h4>Play to win. Click below to get started</h4>
+                                <h3>Welcome To Why Do</h3>
+                                <h4>Reserve Your Spot & Get A Chance To Win Our Game Changing Time Management Tool</h4>
                             </div>
                             <div class="answers cta">
-                                <button type="button" value="1" onclick=${localStorage.getItem("lead") ? "nextVideo('1',true)" : "showForm()"}>Get Started</button>
+                                <button type="button" value="1" onclick=${localStorage.getItem("lead") ? "nextVideo('1',true)" : "showForm()"}>Reserve My Spot!</button>
                                 ${bottomText}
                             </div>
                         </div>
@@ -272,10 +272,10 @@ function initiateInterface() {
                     <div class="textOnForm">
                         <div id="formHeader">
                             <div class="form-client-logo">
-                                <h4>Get In Touch 👋</h4>
+                                <h4>Some Details For Reservation</h4>
                             </div>
                             <div>
-                                <img src="./assets/close.png" onclick="closeForm()">
+                                <img src="https://sm-bus-st.mysprout.cloud/assets/close.png" onclick="closeForm()">
                             </div>
                         </div>
                     </div>
@@ -300,7 +300,7 @@ function closeInterface() {
     videojs(getVideoId()).dispose();
     active = false;
     getParent().innerHTML = `<div id="trigger" onclick="initiateInterface()">
-        <img src="./assets/Smmart-Avtar.svg">
+        <img src="https://sm-bus-st.mysprout.cloud/assets/Smmart-Avtar.svg">
     </div>`
 }
 
@@ -320,10 +320,10 @@ function toggleSound() {
     mute = video.muted() ? 'muted' : null;
     let icon = getParent().querySelector('#speaker');
     if (video.muted()) {
-       icon.src = './assets/mute.svg';
+       icon.src = 'https://sm-bus-st.mysprout.cloud/assets/mute.svg';
     }
     else {
-       icon.src = './assets/sound.svg';
+       icon.src = 'https://sm-bus-st.mysprout.cloud/assets/sound.svg';
     }
 }
 
@@ -353,7 +353,9 @@ function showForm() {
     getParent().querySelector('#fieldsDiv').innerHTML = fieldsDiv;
     const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     if (width < 640) {
-        getParent().querySelector('#formDiv').style.height = '90vh';
+        // getParent().querySelector('#formDiv').style.height = '90vh';
+        getParent().querySelector('#formDiv').style.height = '75vh';
+
     }
     else if (width > 640 && width < 1008) {
         getParent().querySelector('#formDiv').style.height = '90%';
