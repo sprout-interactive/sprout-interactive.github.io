@@ -208,13 +208,15 @@ let interval;
 let mute = 'muted';
 let active = false;
 let dataObj = { date: new Date().toISOString() };
+let autoTrigger = null;
 
 const bottomText = `
     <div class="bottom-text">
         <span>Powered By Sprout</span>
     </div>`;
 
-renderWidget()
+renderWidget();
+autoTrigger = setTimeout(() => { initiateInterface() }, 5000);
 
 function getParent() {
     return document.getElementById('mysproutcloud-interactive-interface');
@@ -231,59 +233,66 @@ function renderWidget() {
 };
 
 function initiateInterface() {
-    active = true;
-    getParent().innerHTML = `<div class="container">
-        <div class="frame" id="frameDiv">
-            <div class="video-container">
-                <div class="videos" id="videosDiv">
-                    <div class="video">
-                        <video id="background" class="video-js vjs-fill" autoplay="true" preload="auto" loop="true" playsinline muted>
-                            <source src="https://vz-da0317b0-84a.b-cdn.net/d1571318-c13d-4604-8e74-8328b9a3113c/playlist.m3u8" type="application/x-mpegURL">
-                        </video>
-                    </div>
-                </div>
-                <div class="header_section">
-                     <img id="logo" src="./assets/smart-logo.png">
-                    <div class="icons-wrapper">
-                        <img src="./assets/close.svg" onclick="closeInterface()">
-                        <img id="speaker" src="./assets/mute.svg" onclick="toggleSound()">
-                    </div>
-                </div>
-                <div class="options" id="optionsDiv">
-                    <div class="currentOptions" id="currentOptionsDiv">
-                        <div class="question">
-                            <h3>Welcome to the Quiz</h3>
-                            <h4>Play to win. Click below to get started</h4>
+    if (!active) {
+        clearTimeout(autoTrigger);
+        active = true;
+        getParent().innerHTML = `<div class="container">
+            <div class="frame" id="frameDiv">
+                <div class="video-container">
+                    <div class="videos" id="videosDiv">
+                        <div class="video">
+                            <video id="background" class="video-js vjs-fill" autoplay="true" preload="auto" loop="true" playsinline muted>
+                                <source src="https://vz-da0317b0-84a.b-cdn.net/d1571318-c13d-4604-8e74-8328b9a3113c/playlist.m3u8" type="application/x-mpegURL">
+                            </video>
                         </div>
-                        <div class="answers cta">
-                            <button type="button" value="1" onclick=${localStorage.getItem("lead") ? "nextVideo('1',true)" : "showForm()"}>Get Started</button>
-                            ${bottomText}
+                    </div>
+                    <div class="header_section">
+                         <img id="logo" src="./assets/smart-logo.png">
+                        <div class="icons-wrapper">
+                            <img src="./assets/close.svg" onclick="closeInterface()">
+                            <img id="speaker" src="./assets/mute.svg" onclick="toggleSound()">
+                        </div>
+                    </div>
+                    <div class="options" id="optionsDiv">
+                        <div class="currentOptions" id="currentOptionsDiv">
+                            <div class="question">
+                                <h3>Welcome to the Quiz</h3>
+                                <h4>Play to win. Click below to get started</h4>
+                            </div>
+                            <div class="answers cta">
+                                <button type="button" value="1" onclick=${localStorage.getItem("lead") ? "nextVideo('1',true)" : "showForm()"}>Get Started</button>
+                                ${bottomText}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="form" id="formDiv">
-            <div class="form-content">
-                <div class="textOnForm">
-                    <div class="form-text">
-                        <img src="./assets/close.png" onclick="closeForm()">
+            <div class="form" id="formDiv">
+                <div class="form-content">
+                    <div class="textOnForm">
+                        <div id="formHeader">
+                            <div class="form-client-logo">
+                                <h4>Get In Touch 👋</h4>
+                            </div>
+                            <div>
+                                <img src="./assets/close.png" onclick="closeForm()">
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-client-logo">
-                        <h4>Get In Touch 👋</h4>
+                    <div class="fields" id="fieldsDiv">
+                  
+                    </div>
+                    <div id="formSubmit">
+                        <button type="button" class="submit" value="submit" onclick="sendInfo()">Submit</button>
                     </div>
                 </div>
-                <div class="fields" id="fieldsDiv">
-              
-                </div>
-                <button type="button" class="submit" value="submit" onclick="sendInfo()">Submit</button>
             </div>
-        </div>
-        <div class="formStatus" id="formStatusDiv">
-            <p id="status"></p>
-        </div>
-    </div>`
-    videojs("background").ready(function() { this.player_.controls(false) });
+            <div class="formStatus" id="formStatusDiv">
+                <p id="status"></p>
+            </div>
+        </div>`
+        videojs("background").ready(function() { this.player_.controls(false) });
+    }
 };
 
 function closeInterface() {
@@ -334,7 +343,6 @@ function shareLink() {
 function showForm() {
     const player = videojs(getVideoId());
     player.pause();
-    getParent().querySelector('#frameDiv').style.display = 'none';
     let fieldsDiv = '';
     dataset.form.lead.forEach(element => {
         fieldsDiv += `<div class="form-group">
@@ -343,14 +351,22 @@ function showForm() {
         </div>`
     })
     getParent().querySelector('#fieldsDiv').innerHTML = fieldsDiv;
-    getParent().querySelector('#formDiv').style.display = 'block';
+    const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    if (width < 640) {
+        getParent().querySelector('#formDiv').style.height = '90vh';
+    }
+    else if (width > 640 && width < 1008) {
+        getParent().querySelector('#formDiv').style.height = '90%';
+    }
+    else{
+        getParent().querySelector('#formDiv').style.height = '71vh';
+    }
 }
 
 function closeForm() {
     const player = videojs(getVideoId());
     player.play();
-    getParent().querySelector('#formDiv').style.display = 'none';
-    getParent().querySelector('#frameDiv').style.display = 'block';
+    getParent().querySelector('#formDiv').style.height = '0%';
 }
 
 function sendInfo() {
