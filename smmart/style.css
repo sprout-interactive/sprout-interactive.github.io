@@ -156,11 +156,9 @@
     margin-bottom: 12px;
 }
 
-#mysproutcloud-interactive-interface .icons-wrapper{
+#mysproutcloud-interactive-interface .icons-wrapper {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    margin-left: 30%;
     align-items: flex-end;
 }
 
@@ -412,10 +410,11 @@
         height: 0vh;
     }
     #mysproutcloud-interactive-interface .fields {
-        height: 82%;
+        height: calc(90% - 90px);
     }
     #mysproutcloud-interactive-interface #formSubmit {
-        height: 11%;
+        margin: 10px 5px;
+        height: auto;
     }
 }
 /* media quries for mobile end here  */

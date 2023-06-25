@@ -6,6 +6,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-Q5924RXKC5');
 
+const domain = 'sm-bus-st.mysprout.cloud';
 let dataset = {
     "1": {
         "questions": [
@@ -226,7 +227,7 @@ function renderWidget() {
     return document.write(
         `<div id="mysproutcloud-interactive-interface"> 
             <div id="trigger" onclick="initiateInterface()">
-                <img src="https://sm-bus-st.mysprout.cloud/assets/Smmart-Avtar.svg">
+                <img src="https://${domain}/assets/Smmart-Avtar.svg">
             </div>
         </div>`
     )
@@ -247,10 +248,10 @@ function initiateInterface() {
                         </div>
                     </div>
                     <div class="header_section">
-                         <img id="logo" src="https://sm-bus-st.mysprout.cloud/assets/smart-logo.png">
+                         <img id="logo" src="https://${domain}/assets/smart-logo.png">
                         <div class="icons-wrapper">
-                            <img src="https://sm-bus-st.mysprout.cloud/assets/close.svg" onclick="closeInterface()">
-                            <img id="speaker" src="https://sm-bus-st.mysprout.cloud/assets/tap-unmute.svg" onclick="toggleSound()">
+                            <img src="https://${domain}/assets/close.svg" onclick="closeInterface()">
+                            <img id="speaker" src="https://${domain}/assets/tap-unmute.svg" onclick="toggleSound()">
                         </div>
                     </div>
                     <div class="options" id="optionsDiv">
@@ -275,7 +276,7 @@ function initiateInterface() {
                                 <h4>Some Details For Reservation</h4>
                             </div>
                             <div>
-                                <img src="https://sm-bus-st.mysprout.cloud/assets/close.png" onclick="closeForm()">
+                                <img src="https://${domain}/assets/close.png" onclick="closeForm()">
                             </div>
                         </div>
                     </div>
@@ -300,7 +301,7 @@ function closeInterface() {
     videojs(getVideoId()).dispose();
     active = false;
     getParent().innerHTML = `<div id="trigger" onclick="initiateInterface()">
-        <img src="https://sm-bus-st.mysprout.cloud/assets/Smmart-Avtar.svg">
+        <img src="https://${domain}/assets/Smmart-Avtar.svg">
     </div>`
 }
 
@@ -320,10 +321,10 @@ function toggleSound() {
     mute = video.muted() ? 'muted' : null;
     let icon = getParent().querySelector('#speaker');
     if (video.muted()) {
-       icon.src = 'https://sm-bus-st.mysprout.cloud/assets/mute.svg';
+       icon.src = 'https://${domain}/assets/mute.svg';
     }
     else {
-       icon.src = 'https://sm-bus-st.mysprout.cloud/assets/sound.svg';
+       icon.src = 'https://${domain}/assets/sound.svg';
     }
 }
 
@@ -353,9 +354,7 @@ function showForm() {
     getParent().querySelector('#fieldsDiv').innerHTML = fieldsDiv;
     const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     if (width < 640) {
-        // getParent().querySelector('#formDiv').style.height = '90vh';
-        getParent().querySelector('#formDiv').style.height = '75vh';
-
+        getParent().querySelector('#formDiv').style.height = '90%';
     }
     else if (width > 640 && width < 1008) {
         getParent().querySelector('#formDiv').style.height = '90%';
