@@ -261,7 +261,7 @@ function initiateInterface() {
                                 <h4>Reserve Your Spot & Get A Chance To Win Our Game Changing Time Management Tool</h4>
                             </div>
                             <div class="answers cta">
-                                <button type="button" value="1" onclick=${localStorage.getItem("lead") ? "nextVideo('1',true)" : "showForm()"}>Reserve My Spot!</button>
+                                <button type="button" id="reserve_my_spot" value="1" onclick=${localStorage.getItem("lead") ? "nextVideo('1',true)" : "showForm()"}>Reserve My Spot!</button>
                                 ${bottomText}
                             </div>
                         </div>
